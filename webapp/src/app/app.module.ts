@@ -13,12 +13,12 @@ import { MatDividerModule } from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { ConfirmDialogService } from 'src/services/confirn-dialog.service';
+import { SnackBarService } from 'src/services/snackbar.service';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, SnackBarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +34,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     MatSnackBarModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [SnackBarService, ConfirmDialogService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
