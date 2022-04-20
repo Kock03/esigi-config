@@ -26,13 +26,13 @@ export class AppComponent {
       name: 'Active Directory',
       icon: 'admin_panel_settings',
       selected: false,
-      action: '',
+      action: 'active_directory/novo',
     },
     {
       name: 'E-mail',
       icon: 'email',
       selected: false,
-      action: '',
+      action: 'email/novo',
     },
     {
       name: 'Cadastros',
