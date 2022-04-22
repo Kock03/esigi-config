@@ -38,7 +38,7 @@ export class AppComponent {
       name: 'Cadastros',
       icon: 'settings_applications',
       selected: false,
-      action: '',
+      action: 'cadastros/opcoes',
     },
   ];
 

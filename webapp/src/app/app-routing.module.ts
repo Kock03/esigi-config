@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/active-directory/active-directory.module').then((m) => m.ActiveDirectoryModule),
   },
+  {
+    path: 'cadastros',
+    loadChildren: () =>
+      import('./modules/registers/registers.module').then((m) => m.RegistersModule),
+  },
 ];
 
 
