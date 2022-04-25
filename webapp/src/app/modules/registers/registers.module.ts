@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { ClientConfigComponent } from './client-config/client-config.component';
 
 
 const routes: Routes = [
@@ -17,12 +18,17 @@ const routes: Routes = [
     path: 'opcoes',
     component: RegistersInitialComponent,
   },
+  {
+    path: 'clientes',
+    component: ClientConfigComponent,
+  },
 ];
 
 
 @NgModule({
   declarations: [
-    RegistersInitialComponent
+    RegistersInitialComponent,
+    ClientConfigComponent
   ],
   imports: [
     CommonModule,
