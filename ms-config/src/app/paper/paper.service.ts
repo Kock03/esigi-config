@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindConditions, FindManyOptions, FindOneOptions, Repository } from 'typeorm';
-import { PaperDto } from './dtos/create-update-paper';
+import { PaperDto } from './dtos/create-update-paper.dto';
 import { PaperEntity } from './paper.entity';
 
 @Injectable()

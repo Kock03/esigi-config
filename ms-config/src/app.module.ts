@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { SnakeNamingStrategy } from 'typeorm-snake-naming-strategy';
 import { PaperModule } from './app/paper/paper.module';
+import { ProjectStatusModule } from './app/project-status/project-status.module';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { PaperModule } from './app/paper/paper.module';
       synchronize: true,
       namingStrategy: new SnakeNamingStrategy(),
     } as TypeOrmModuleOptions),
-    PaperModule,],
+    PaperModule, ProjectStatusModule],
   controllers: [],
   providers: [],
 })

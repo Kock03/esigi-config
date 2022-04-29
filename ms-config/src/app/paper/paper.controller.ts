@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Post, Put } from '@nestjs/common';
-import { PaperDto } from './dtos/create-update-paper';
+import { PaperDto } from './dtos/create-update-paper.dto';
 import { PaperService } from './paper.service';
 
 @Controller('/api/v1/paper')

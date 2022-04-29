@@ -1,8 +1,8 @@
 import { IsNotEmpty, IsString } from "class-validator";
 
-export class PaperDto {
+export class ProjectStatusDto {
 
     @IsString()
     @IsNotEmpty()
-    paperName: string;
+    name: string;
 }
