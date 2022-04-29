@@ -14,6 +14,7 @@ import { ClientConfigComponent } from './client-config/client-config.component';
 import { CollaboratorConfigComponent } from './collaborator-config/collaborator-config.component';
 import { ProjectsConfigComponent } from './projects-config/projects-config.component';
 import { FinancesConfigComponent } from './finances-config/finances-config.component';
+import { GenericConfigComponent } from './generic-config/generic-config.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
     path: 'financeiro',
     component: FinancesConfigComponent,
   },
+  {
+    path: 'genericos',
+    component: GenericConfigComponent,
+  },
 ];
 
 
@@ -46,7 +51,8 @@ const routes: Routes = [
     ClientConfigComponent,
     CollaboratorConfigComponent,
     ProjectsConfigComponent,
-    FinancesConfigComponent
+    FinancesConfigComponent,
+    GenericConfigComponent
   ],
   imports: [
     CommonModule,

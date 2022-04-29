@@ -30,4 +30,8 @@ export class RegistersInitialComponent implements OnInit {
     this.router.navigate(['cadastros/financeiro'])
   }
 
+  genericConfig(){
+    this.router.navigate(['cadastros/genericos'])
+  }
+
 }
