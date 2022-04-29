@@ -11,6 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { ClientConfigComponent } from './client-config/client-config.component';
+import { CollaboratorConfigComponent } from './collaborator-config/collaborator-config.component';
+import { ProjectsConfigComponent } from './projects-config/projects-config.component';
+import { FinancesConfigComponent } from './finances-config/finances-config.component';
 
 
 const routes: Routes = [
@@ -22,13 +25,28 @@ const routes: Routes = [
     path: 'clientes',
     component: ClientConfigComponent,
   },
+  {
+    path: 'colaboradores',
+    component: CollaboratorConfigComponent,
+  },
+  {
+    path: 'projetos',
+    component: ProjectsConfigComponent,
+  },
+  {
+    path: 'financeiro',
+    component: FinancesConfigComponent,
+  },
 ];
 
 
 @NgModule({
   declarations: [
     RegistersInitialComponent,
-    ClientConfigComponent
+    ClientConfigComponent,
+    CollaboratorConfigComponent,
+    ProjectsConfigComponent,
+    FinancesConfigComponent
   ],
   imports: [
     CommonModule,

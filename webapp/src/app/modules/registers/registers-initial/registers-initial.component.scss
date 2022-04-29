@@ -1,5 +1,5 @@
 #registers-initial{
-    .config-group-box {
+    .initial-group-box {
         margin: auto;
         margin-top: 200px!important;
         margin-left: 50px!important;
@@ -12,7 +12,7 @@
         overflow: auto;
       }
   
-      .config-box {
+      .initial-box {
         margin: 6px;
         width: 256px;
         min-width: 256px;
@@ -23,14 +23,14 @@
         background: #753BBD;
       }
   
-      .config-box:hover {
+      .initial-box:hover {
         background: #A6D6E5 !important;
         -webkit-transition: background-color 300ms linear;
         -ms-transition: background-color 300ms linear;
         transition: background-color 300ms linear;
       }
   
-      .config-box:not(:hover)::before {
+      .initial-box:not(:hover)::before {
         position: absolute;
         top: 55px;
         display: block;
@@ -41,7 +41,7 @@
         transition: 0.3s;
       }
   
-      .config-box:hover::before {
+      .initial-box:hover::before {
         position: absolute;
         top: 0;
         display: block;
@@ -52,7 +52,7 @@
         margin-left: -0.8rem;
       }
   
-      .config-name {
+      .initial-name {
           font-size: 15px;
         text-align: center;
         margin-top: 14px;

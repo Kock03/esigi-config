@@ -1,15 +1,15 @@
 <div id="registers-initial" class="page">
     <div class="content-scroll">
-        <div class="config-group-box">
+        <div class="initial-group-box">
             <div  fxLayout="row wrap" fxLayoutAlign="start">
               <div>
                 <button
-                  class="config-box"
+                  class="initial-box"
                   mat-stroked-button
                   fxLayout="column"
                   (click)="clientConfig()"
                 >
-                  <div class="config-name" fxLayoutAlign="start center">
+                  <div class="initial-name" fxLayoutAlign="start center">
                     <mat-icon class="icon">person</mat-icon>
                     <h3>Cadastro de clientes</h3>
                   </div>
@@ -17,11 +17,12 @@
               </div>
               <div>
                 <button
-                  class="config-box"
+                  class="initial-box"
                   mat-stroked-button
                   fxLayout="column"
+                  (click)="collaboratorConfig()"
                 >
-                  <div class="config-name" fxLayoutAlign="start center">
+                  <div class="initial-name" fxLayoutAlign="start center">
                     <mat-icon class="icon">group</mat-icon>
                     <h3>Cadastro de colaboradores</h3>
                   </div>
@@ -29,11 +30,12 @@
               </div>
               <div>
                 <button
-                  class="config-box"
+                  class="initial-box"
                   mat-stroked-button
                   fxLayout="column"
+                  (click)="projectConfig()"
                 >
-                  <div class="config-name" fxLayoutAlign="start center">
+                  <div class="initial-name" fxLayoutAlign="start center">
                     <mat-icon class="icon">work</mat-icon>
                     <h3>Cadastro de projetos</h3>
                   </div>
@@ -41,11 +43,24 @@
               </div>
               <div>
                 <button
-                  class="config-box"
+                  class="initial-box"
+                  mat-stroked-button
+                  fxLayout="column"
+                  (click)="financeConfig()"
+                >
+                  <div class="initial-name" fxLayoutAlign="start center">
+                    <mat-icon class="icon">work</mat-icon>
+                    <h3>Cadastro Financeiro</h3>
+                  </div>
+                </button>
+              </div>
+              <div>
+                <button
+                  class="initial-box"
                   mat-stroked-button
                   fxLayout="column"
                 >
-                  <div class="config-name" fxLayoutAlign="start center">
+                  <div class="initial-name" fxLayoutAlign="start center">
                     <mat-icon class="icon">add</mat-icon>
                     <h3>Cadastros de genéricos</h3>
                   </div>
