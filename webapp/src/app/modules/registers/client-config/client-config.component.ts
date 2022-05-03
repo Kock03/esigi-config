@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ConfigDialogComponent } from 'src/app/components/config-dialog/config-dialog.component';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
+import { MenuItem } from '../_menu-item';
+import { CUSTOMER_MENU_LIST } from './client-config-list';
+
 
 @Component({
   selector: 'app-client-config',
@@ -10,30 +11,28 @@ import { ConfigDialogService } from 'src/services/config-dialog.service';
   styleUrls: ['./client-config.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
+
 export class ClientConfigComponent implements OnInit {
+  menuList = CUSTOMER_MENU_LIST;
   constructor(
     private router: Router,
-    private dialog: MatDialog,
     private configDialogService: ConfigDialogService
   ) {}
 
   ngOnInit(): void {}
 
-  goBack() {
-    this.router.navigate(['cadastros/opcoes']);
-  }
-
-  createClienteRegister() {
-    const options = {
+  openModal(menu: MenuItem){
+    const dialogRef = {
       data: {
-        title: 'Registrar novo cliente',
+        title: menu.modalTitle,
+        entity: menu.entity,
       },
       panelClass: 'config-modal',
     };
-    this.configDialogService.open(options);
+    this.configDialogService.open(dialogRef);
+  }
 
-    const dialogRef = this.dialog.open(ConfigDialogComponent, {
-
-    });
+  goBack() {
+    this.router.navigate(['cadastros/opcoes']);
   }
 }

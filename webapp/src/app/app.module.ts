@@ -13,7 +13,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ConfirmDialogService } from 'src/services/confirn-dialog.service';
 import { SnackBarService } from 'src/services/snackbar.service';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
