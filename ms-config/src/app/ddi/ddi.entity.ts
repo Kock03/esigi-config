@@ -1,7 +1,7 @@
-import { PrimaryGeneratedColumn, Column, Entity } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class SeniorityEntity{
+export class DDIEntity{
 
     @PrimaryGeneratedColumn('uuid')
     id: string;

@@ -34,8 +34,8 @@ export class GenderService {
     }
 
     async store(data: GenderDto) {
-        const paper = this.genderRepository.create(data);
-        return await this.genderRepository.save(paper);
+        const gender = this.genderRepository.create(data);
+        return await this.genderRepository.save(gender);
     }
 
     async update(id: string, data: GenderDto) {

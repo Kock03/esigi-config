@@ -14,6 +14,12 @@ import { SeniorityModule } from './app/seniority/seniority.module';
 import { RelationshipTypeModule } from './app/relationship-type/relationship-type.module';
 import { DocumentTypeModule } from './app/document-type/document-type.module';
 import { SalaryChangeReasonModule } from './app/salary-change-reason/salary-change-reason.module';
+import { InstructionStatusModule } from './app/instruction-status/instruction-status.module';
+import { LanguagesModule } from './app/languages/languages.module';
+import { FinancialInstitutionModule } from './app/financial-institution/financial-institution.module';
+import { TypesOfExpensesModule } from './app/types-of-expenses/types-of-expenses.module';
+import { ProvidersModule } from './app/providers/providers.module';
+import { DDIModule } from './app/ddi/ddi.module';
 
 @Module({
   imports: [
@@ -31,7 +37,8 @@ import { SalaryChangeReasonModule } from './app/salary-change-reason/salary-chan
     } as TypeOrmModuleOptions),
     PaperModule, ProjectStatusModule, CollaboratorPositionModule, GenderModule, ContractTypesModule,
     TechnologiesModule, MaritalStatusModule, SeniorityModule, SeniorityModule, RelationshipTypeModule,
-    DocumentTypeModule, EducationLevelModule, SalaryChangeReasonModule,],
+    DocumentTypeModule, EducationLevelModule, SalaryChangeReasonModule, InstructionStatusModule, LanguagesModule, 
+    FinancialInstitutionModule, TypesOfExpensesModule, ProvidersModule, DDIModule,],
   controllers: [],
   providers: [],
 })
