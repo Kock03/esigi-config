@@ -64,6 +64,11 @@ export class ConfigDialogComponent implements OnInit {
             name: 'Finanças',
           });
           break;
+          case 'generic-changes':
+            this.dataTable.push({
+              name: 'Genérico',
+            });
+            break;
 
 
       default:
