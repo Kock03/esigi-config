@@ -37,6 +37,10 @@ export class ConfigDialogComponent implements OnInit {
     });
   }
 
+  // clear(): void {
+  //   this.clearForm();
+  // }
+
   getData() {
     // todo - criar provider para buscar dados do backend e popular o dataTable
     // configProvider que vai receber a entity e retornar os dados

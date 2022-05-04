@@ -1,11 +1,9 @@
 <div id="configDialog" class="content-scroll-config">
-  <div mat-dialog-content>
-  </div>
+  <div mat-dialog-content></div>
   <div class="button-config-dialog-control">
     <mat-panel-title class="config-box" fxLayout="row">
       <mat-icon class="icon-config-dialog">account_circle</mat-icon>
       <button disabled class="button-config" mat-button>
-        <!-- <h3 matDialogTitle>{{ titleMessage }}</h3> -->
         <h2 fxLayoutAlign="start">{{title}}</h2>
       </button>
       <button (click)="close()" class="cancel-icon-config" mat-button>
@@ -13,6 +11,7 @@
       </button>
     </mat-panel-title>
   </div>
+  <div class="form-table-config">
   <mat-dialog-content
     fxLayout="column"
     fxLayoutAlign="space-between"
@@ -20,29 +19,21 @@
   >
     <form class="form-config" [formGroup]="configForm" fxLayout="column">
       <div fxFlex="100" fxLayoutGap="16px">
-        <mat-form-field fxFlex="50" appearance="outline">
-            <mat-label>Nome</mat-label>
-            <input
-              matInput
-              disableRipple
-              formControlName="name"
-              placeholder="nome"
-            />
-          </mat-form-field>
+        <mat-form-field fxFlex="74" appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input
+            matInput
+            disableRipple
+            formControlName="name"
+            placeholder="nome"
+          />
+        </mat-form-field>
 
-        <div fxFlex="50" fxLayout="row">
-          <button
-            class="button-form-config"
-            mat-button
-            color="primary"
-          >
+        <div fxFlex="26" fxLayout="row">
+          <button class="button-form-config" mat-button color="primary">
             <mat-icon>close</mat-icon>
           </button>
-          <button
-            class="button-form-config"
-            color="primary"
-            mat-flat-button
-          >
+          <button class="button-form-config" color="primary" mat-flat-button>
             <mat-icon>save</mat-icon>
           </button>
         </div>
@@ -53,15 +44,24 @@
       <table mat-table #configDialogTable [dataSource]="dataTable">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Nome</th>
-          <td mat-cell *matCellDef="let config">
-           {{ config.name }} 
-          </td>
+          <td mat-cell *matCellDef="let config">{{ config.name }}</td>
         </ng-container>
 
         <ng-container matColumnDef="icon">
-          <th mat-header-cell *matHeaderCellDef clas="iconAdd" style="text-align: end"></th>
-          <td class="button-tab" mat-cell *matCellDef="let config" clas="icon" style="text-align: end">
-            <button class="table-button" mat-button >
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            clas="iconAdd"
+            style="text-align: end"
+          ></th>
+          <td
+            class="button-tab"
+            mat-cell
+            *matCellDef="let config"
+            clas="icon"
+            style="text-align: end"
+          >
+            <button class="table-button" mat-button>
               <mat-icon>edit</mat-icon>
             </button>
             <button class="table-button" mat-button>
@@ -76,8 +76,5 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
     </div>
-
-
   </mat-dialog-content>
 </div>
-
