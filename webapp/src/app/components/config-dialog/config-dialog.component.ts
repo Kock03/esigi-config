@@ -42,19 +42,29 @@ export class ConfigDialogComponent implements OnInit {
     // configProvider que vai receber a entity e retornar os dados
     // this.dataTable = await this.configProvider.findAll(this.entity);
     switch (this.entity) {
-      case 'customers-charges':
+      case 'customers-changes':
         this.dataTable.push(
           {
-            name: 'Cliente1',
+            name: 'Cliente',
           },
-          { name: 'Cliente2' }
         );
         break;
-      case 'collaborators-charges':
+      case 'collaborators-changes':
         this.dataTable.push({
-          name: 'Colaborador1',
+          name: 'Colaborador',
         });
         break;
+        case 'projects-changes':
+        this.dataTable.push({
+          name: 'Projetos',
+        });
+        break;
+        case 'finances-changes':
+          this.dataTable.push({
+            name: 'Finanças',
+          });
+          break;
+
 
       default:
         break;
