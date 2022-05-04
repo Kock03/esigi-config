@@ -2,13 +2,13 @@ export const COLLABORATOR_MENU_LIST = [
   {
     modalTitle: 'Registro de Cargos Colaboradores',
     menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-office-changes',
+    entity: 'collaborators-charge',
     icon: 'supervisor_account',
   },
   {
     modalTitle: 'Registro de Sexo',
     menuName: 'Sexo',
-    entity: 'collaborators-sex-changes',
+    entity: 'collaborators-charge',
     icon: 'supervisor_account',
   },
   {
@@ -42,6 +42,12 @@ export const COLLABORATOR_MENU_LIST = [
     icon: 'supervisor_account',
   },
   {
+    modalTitle: 'Registro de Tipos de Contratos',
+    menuName: 'Tipos de Contratos',
+    entity: 'collaborators-charges',
+    icon: 'supervisor_account',
+  },
+  {
     modalTitle: 'Registro de Tecnologias',
     menuName: 'Tecnologias',
     entity: 'collaborators-charges',
@@ -60,38 +66,8 @@ export const COLLABORATOR_MENU_LIST = [
     icon: 'supervisor_account',
   },
   {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-charges',
-    icon: 'supervisor_account',
-  },
-  {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-charges',
-    icon: 'supervisor_account',
-  },
-  {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-charges',
-    icon: 'supervisor_account',
-  },
-  {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-charges',
-    icon: 'supervisor_account',
-  },
-  {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
-    entity: 'collaborators-charges',
-    icon: 'supervisor_account',
-  },
-  {
-    modalTitle: 'Registro de Cargos Colaboradores',
-    menuName: 'Cargos Colaboradores',
+    modalTitle: 'Registro de Tipo de Documento Identificação',
+    menuName: 'Tipo de Documento Identificação',
     entity: 'collaborators-charges',
     icon: 'supervisor_account',
   },
