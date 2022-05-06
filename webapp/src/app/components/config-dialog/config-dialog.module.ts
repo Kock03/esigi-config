@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -19,6 +20,7 @@ import {MatTableModule} from '@angular/material/table';
     MatDialogModule,
     MatButtonModule,  
     FlexLayoutModule,
+    TranslateModule.forChild(),
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,

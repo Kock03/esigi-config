@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ConfigDialogComponent } from 'src/app/components/config-dialog/config-dialog.component';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
 import { MenuItem } from '../_menu-item';
@@ -15,7 +16,8 @@ export class CollaboratorConfigComponent implements OnInit {
   menuList = COLLABORATOR_MENU_LIST;
   constructor(
     private configDialogService: ConfigDialogService,
-    private router: Router
+    private router: Router,
+    public translateService: TranslateService
   ) {}
 
   ngOnInit(): void {}

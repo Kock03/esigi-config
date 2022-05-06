@@ -1,0 +1,50 @@
+{
+
+  "user": "Usuário",
+  "password": "Senha",
+  "error_small_password": "Senha muito pequena",
+  "error_long_password": "senha muito grande",
+  "error_user_required": "Campo usuário é obrigatório",
+  "error_password_required": "Campo senha é obrigatório",
+  "connect": "Conectar",
+  "menuName": "Cargos Clientes",
+  "back_btn": "Voltar",
+
+  "index": {
+    "index_title": "Configurações"
+  },
+ 
+  "app_component": {
+    "function": "Função",
+    "logout_span": "Logout"
+  },
+
+  "active_directory": {
+    "ad_connection": "Conexão Active Directory",
+    "ad_address": "Endereço AD",
+    "error_ad_address_required": "Campo endereço AD é obrigatório"
+  },
+
+  "email_config": {
+    "server_config": "Configuração De Servidor",
+    "server_type": "Tipo de Servidor",
+    "entry_server": "Servidor De Entrada",
+    "server": "Servidor",
+    "port": "Porta",
+    "ssl_tls_text": "Este servidor requer uma conexão criptografada(SSL/TLS)",
+    "cryptography_method": "Método de Criptografia",
+    "spa_text": "Este login usando Autenticação de Senha de Segurança(SPA)",
+    "exit_server": "Servidor De Saída",
+    "none": "Nenhum",
+    "automatic": "Automático"
+  },
+
+  "register_initial": {
+    "client_register": "Cadastro de clientes",
+    "collaborator_register": "Cadastro de colaboradores",
+    "project_register": "Cadastro de projetos",
+    "financial_register": "Cadastro Financeiro",
+    "generic_register": "Cadastro de genéricos"
+  }
+
+}

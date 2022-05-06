@@ -1,12 +1,12 @@
 <div id="activeEmail" class="page">
     <div fxLayout="row" fxLayoutAlign="start start">
-      <h2 mat-dialog-title class="title">Configuração De Servidor</h2>
+      <h2 mat-dialog-title class="title">{{ "email_config.server_config" | translate }}</h2>
     </div>
     <div class="content-scroll" fxLayout="column">
       <form [formGroup]="settingForm">
         <div fxLayout="column" fxLayoutGap="16px" fxFlexAlign="start">
           <mat-form-field appearance="outline">
-            <mat-label>Tipo de Servidor</mat-label>
+            <mat-label>{{ "email_config.server_type" | translate }}</mat-label>
             <mat-select
               matInput
               disableRipple
@@ -18,17 +18,17 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <h2>Servidor de entrada</h2>
+        <h2>{{ "email_config.entry_server" | translate }}</h2>
         <div fxLayoutGap="16px" fxFlexAlign="start" fxLayout="row">
           <mat-form-field appearance="outline">
-            <mat-label>Servidor</mat-label>
+            <mat-label>{{ "email_config.server" | translate }}</mat-label>
             <input
               matInput
               placeholder="Servidor"
               formControlName="incomingServerName" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label>Porta</mat-label>
+            <mat-label>{{ "email_config.port" | translate }}</mat-label>
             <input matInput placeholder="Porta" formControlName="door" />
           </mat-form-field>
         </div>
@@ -38,68 +38,66 @@
             class="checkbox"
             color="primary"
             formControlName="checkServer"
-            >Este servidor requer uma conexão criptografada(SSL/TLS)</mat-checkbox
+            >{{ "email_config.ssl_tls_text" | translate }}</mat-checkbox
           >
   
           <mat-form-field
             appearance="outline"
             *ngIf="settingForm.controls['serverType'].value !== 1">
-            <mat-label>Método de Criptografia</mat-label>
+            <mat-label>{{ "email_config.cryptography_method" | translate }}</mat-label>
             <mat-select
               matInput
               disableRipple
               formControlName="incomingEncryptionMethod">
-              <mat-option value="1">Nenhum</mat-option>
+              <mat-option value="1">{{ "email_config.none" | translate }}</mat-option>
               <mat-option value="2">SSL/TLS</mat-option>
               <mat-option value="3">STARTTLS</mat-option>
               <mat-option value="4">STARTTLS</mat-option>
-              <mat-option value="5">Automático</mat-option>
+              <mat-option value="5">{{ "email_config.automatic" | translate }}</mat-option>
             </mat-select>
           </mat-form-field>
   
           <mat-checkbox color="primary" formControlName="checkLogin"
-            >Este login usando Autenticação de Senha de
-            Segurança(SPA)</mat-checkbox
+            >{{ "email_config.spa_text" | translate }}</mat-checkbox
           >
         </div>
         <p></p>
-        <h2>Servidor de saída</h2>
+        <h2>{{ "email_config.exit_server" | translate }}</h2>
         <div fxLayoutGap="16px" fxFlexAlign="start" fxLayout="row">
           <mat-form-field appearance="outline">
-            <mat-label>Servidor</mat-label>
+            <mat-label>{{ "email_config.server" | translate }}</mat-label>
             <input
               matInput
               placeholder="Servidor"
               formControlName="outgoingServerName" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label>Porta</mat-label>
+            <mat-label>{{ "email_config.port" | translate }}</mat-label>
             <input matInput placeholder="Porta" formControlName="outgoingDoor" />
           </mat-form-field>
         </div>
         <div fxLayout="column">
           <mat-form-field appearance="outline">
-            <mat-label>Método de Criptografia</mat-label>
+            <mat-label>{{ "email_config.cryptography_method" | translate }}</mat-label>
             <mat-select
               matInput
               disableRipple
               formControlName="outgoingEncryptionMethod">
-              <mat-option value="option1">Nenhum</mat-option>
+              <mat-option value="option1">{{ "email_config.none" | translate }}</mat-option>
               <mat-option value="option2">SSL/TLS</mat-option>
               <mat-option value="option3">STARTTLS</mat-option>
               <mat-option value="option3">STARTTLS</mat-option>
-              <mat-option value="option3">Automático</mat-option>
+              <mat-option value="option3">{{ "email_config.automatic" | translate }}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-checkbox color="primary" formControlName="outgoingCheckLogin"
-            >Este login usando Autenticação de Senha de
-            Segurança(SPA)</mat-checkbox
+            >{{ "email_config.spa_text" | translate }}</mat-checkbox
           >
         </div>
       </form>
     </div>
     <div class="navigation-buttons" fxLayoutAlign="center end" fxLayoutGap="16px">
-      <button mat-flat-button color="primary">Conectar</button>
+      <button mat-flat-button color="primary">{{ "connect" | translate }}</button>
     </div>
   </div>
   
