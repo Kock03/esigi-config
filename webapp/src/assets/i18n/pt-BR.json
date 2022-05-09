@@ -9,6 +9,9 @@
   "connect": "Conectar",
   "menuName": "Cargos Clientes",
   "back_btn": "Voltar",
+  "cancel_btn": "Cancelar",
+  "delete_btn": "Deletar",
+  "name": "Nome",
 
   "index": {
     "index_title": "Configurações"

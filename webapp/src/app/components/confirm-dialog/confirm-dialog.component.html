@@ -4,9 +4,9 @@
 </div>
 <div mat-dialog-actions fxLayoutAlign="end end">
   <button mat-flat-button class="delete" (click)="dialogRef.close(false)">
-    Cancelar
+    {{ "cancel_btn" | translate }}
   </button>
   <button mat-flat-button color="primary" (click)="dialogRef.close(true)">
-    Deletar
+    {{ delete_btn" | translate }}
   </button>
 </div>
