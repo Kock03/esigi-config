@@ -15,6 +15,7 @@ import { CollaboratorConfigComponent } from './collaborator-config/collaborator-
 import { ProjectsConfigComponent } from './projects-config/projects-config.component';
 import { FinancesConfigComponent } from './finances-config/finances-config.component';
 import { GenericConfigComponent } from './generic-config/generic-config.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const routes: Routes = [
@@ -60,6 +61,7 @@ const routes: Routes = [
     FlexLayoutModule,
     RouterModule,
     MatInputModule,
+    TranslateModule.forChild(),
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
