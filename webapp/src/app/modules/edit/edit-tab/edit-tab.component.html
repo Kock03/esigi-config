@@ -1,0 +1,91 @@
+<div id="collaboratorRegisterTab" class="tab">
+    <div class="content-scroll">
+        <div fxLayout="row">
+            <div fxLayout="column">
+                <form>
+                    <div fxLayout="column">
+                        <div fxFlex="100" fxLayoutGap="16px">
+                            <h2 fxFlexAlign="center" fxFlex="100">Editar Perfil</h2>
+                        </div>
+                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
+                            <mat-form-field fxFlex="50" appearance="outline">
+                                <mat-label>
+                                    Nome/Razão Social
+                                </mat-label>
+                                <input matInput placeholder="Nome" formControlName="firstNameCorporateName" />
+                            </mat-form-field>
+
+
+                            <mat-form-field fxFlex="50" appearance="outline">
+                                <mat-label>
+                                    Sobrenome/Nome Fantasia
+                                </mat-label>
+                                <input matInput formControlName="lastNameFantasyName" placeholder="Sobrenome" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
+                            <mat-form-field fxFlex="50" appearance="outline">
+                                <mat-label>{{'generic.cpf'|translate}}</mat-label>
+                                <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
+                            </mat-form-field>
+
+                            <mat-form-field fxFlex="50" appearance="outline">
+                                <mat-label>{{'generic.birth_date'|translate}}</mat-label>
+                                <input matInput formControlName="birthDate" placeholder="Data Aniversário"
+                                    mask="00-00-0000" />
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
+                            <mat-form-field fxFlex="100s" appearance="outline">
+                                <mat-label>{{'generic.login'|translate}}</mat-label>
+                                <input matInput placeholder="Login" formControlName="login" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </form>
+                <div fxFlex="100" fxLayoutGap="16px" class="button-dialog">
+                    <button mat-flat-button color="primary" fxFlex="100">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+            <div class="form-login" fxLayout="column">
+                <form>
+                    <div fxLayout="column">
+                        <div fxFlex="100" fxLayoutGap="16px">
+                            <h2 fxFlexAlign="center">Editar Senha</h2>
+                        </div>
+                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Senha Atual</mat-label>
+                                <input matInput placeholder="Login" formControlName="login" />
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
+
+                            <mat-form-field fxFlex="100" appearance="outline">
+                                <mat-label>Nova Senha</mat-label>
+                                <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
+                            <mat-form-field fxFlex="100" appearance="outline">
+                                <mat-label>Con</mat-label>
+                                <input matInput formControlName="birthDate" placeholder="Data Aniversário"
+                                    mask="00-00-0000" />
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                </form>
+                <div fxFlex="100" fxLayoutGap="16px" class="button-dialog" fxLayoutAlign="start end">
+                    <button mat-flat-button color="primary" fxFlex="100">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column" fxFlexAlign="end">
+
+        </div>
+    </div>

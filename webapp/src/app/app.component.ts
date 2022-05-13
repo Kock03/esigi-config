@@ -41,6 +41,12 @@ export class AppComponent {
       selected: false,
       action: 'cadastros/opcoes',
     },
+    {
+      name: 'About',
+      icon: 'info',
+      selected: false,
+      action: 'about/info',
+    },
   ];
 
   collaboratorId!: string | null;
@@ -58,10 +64,14 @@ export class AppComponent {
     this.translateService.setDefaultLang('pt-BR');
     this.translateService.use('pt-BR');
     this.router.events
-    .pipe(filter(event => event instanceof NavigationEnd))
-    .subscribe((res: any) => {
-      this.activeMenu = res.url.split('/')[1];
-    });
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((res: any) => {
+        this.activeMenu = res.url.split('/')[1];
+      });
+  }
+
+  viewEdit() {
+    this.router.navigate(['edit/novo']);
   }
 
 

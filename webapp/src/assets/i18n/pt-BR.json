@@ -1,5 +1,4 @@
 {
-
   "user": "Usuário",
   "password": "Senha",
   "error_small_password": "Senha muito pequena",
@@ -12,22 +11,18 @@
   "cancel_btn": "Cancelar",
   "delete_btn": "Deletar",
   "name": "Nome",
-
   "index": {
     "index_title": "Configurações"
   },
- 
   "app_component": {
-    "function": "Função",
+    "edit": "Editar",
     "logout_span": "Logout"
   },
-
   "active_directory": {
     "ad_connection": "Conexão Active Directory",
     "ad_address": "Endereço AD",
     "error_ad_address_required": "Campo endereço AD é obrigatório"
   },
-
   "email_config": {
     "server_config": "Configuração De Servidor",
     "server_type": "Tipo de Servidor",
@@ -41,7 +36,6 @@
     "none": "Nenhum",
     "automatic": "Automático"
   },
-
   "register_initial": {
     "client_register": "Cadastro de clientes",
     "collaborator_register": "Cadastro de colaboradores",
@@ -49,5 +43,4 @@
     "financial_register": "Cadastro Financeiro",
     "generic_register": "Cadastro de genéricos"
   }
-
 }
