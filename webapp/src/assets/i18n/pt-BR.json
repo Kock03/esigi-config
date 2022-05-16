@@ -10,9 +10,7 @@
   "back_btn": "Voltar",
   "delete_btn": "Deletar",
   "name": "Nome",
-  "index": {
-    "index_title": "Configurações"
-  },
+  "index_title": "Configurações",
   "app_component": {
     "edit": "Editar",
     "logout_span": "Logout"
