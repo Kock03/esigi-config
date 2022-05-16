@@ -1,91 +1,90 @@
-<div id="collaboratorRegisterTab" class="tab">
+<div id="editTab" class="tab">
     <div class="content-scroll">
-        <div fxLayout="row">
-            <div fxLayout="column">
-                <form>
-                    <div fxLayout="column">
-                        <div fxFlex="100" fxLayoutGap="16px">
-                            <h2 fxFlexAlign="center" fxFlex="100">Editar Perfil</h2>
-                        </div>
-                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
-                            <mat-form-field fxFlex="50" appearance="outline">
-                                <mat-label>
-                                    Nome/Razão Social
-                                </mat-label>
-                                <input matInput placeholder="Nome" formControlName="firstNameCorporateName" />
-                            </mat-form-field>
+        <div class="section">
+            <div class="division-left">
+                <div class='division-left-content '>
+                    <form [formGroup]="collaboratorForm" style="width:85%">
+                        <div fxLayout="column">
+                            <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
+                                <div class="image-upload">
+                                    <label for="fileInput">
+                                        <img src="{{ url }}" alt="" />
+                                    </label>
+                                    <input type="file" id="fileInput" (change)="fileChanged($event)" />
+                                </div>
+                                <div>
+                                    <h2 class="edit-profile-title" fxFlexAlign="center" style="text-align: center"
+                                        fxFlex="100">
+                                        {{"edit_profile.name" | translate}}</h2>
+                                </div>
+                            </div>
 
+                            <div fxLayout="row" fxFlex="200" fxLayoutGap="16px" fxFlexAlign="start">
+                                <mat-form-field fxFlex="100" appearance="outline">
+                                    <mat-label>
+                                        {{"edit_profile.corporate_name" | translate}}
+                                    </mat-label>
+                                    <input matInput placeholder="Nome" formControlName="firstNameCorporateName" />
+                                </mat-form-field>
+                                <mat-form-field fxFlex="100" appearance="outline">
+                                    <mat-label>
+                                        {{"edit_profile.surname_fantasy_name" | translate}}
+                                    </mat-label>
+                                    <input matInput formControlName="lastNameFantasyName" placeholder="Sobrenome" />
+                                </mat-form-field>
+                            </div>
+                            <div fxLayout="row" fxFlex=" 200" fxLayoutGap="16px" fxFlexAlign="start">
+                                <mat-form-field fxFlex="100" appearance="outline">
+                                    <mat-label>{{"edit_profile.cpf" | translate}}</mat-label>
+                                    <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
+                                </mat-form-field>
 
-                            <mat-form-field fxFlex="50" appearance="outline">
-                                <mat-label>
-                                    Sobrenome/Nome Fantasia
-                                </mat-label>
-                                <input matInput formControlName="lastNameFantasyName" placeholder="Sobrenome" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
-                            <mat-form-field fxFlex="50" appearance="outline">
-                                <mat-label>{{'generic.cpf'|translate}}</mat-label>
-                                <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
-                            </mat-form-field>
+                                <mat-form-field fxFlex="100" appearance="outline">
+                                    <mat-label>{{"edit_profile.birth_date" | translate}}</mat-label>
+                                    <input matInput formControlName="birthDate" placeholder="Data Aniversário"
+                                        mask="00-00-0000" />
+                                </mat-form-field>
+                            </div>
 
-                            <mat-form-field fxFlex="50" appearance="outline">
-                                <mat-label>{{'generic.birth_date'|translate}}</mat-label>
-                                <input matInput formControlName="birthDate" placeholder="Data Aniversário"
-                                    mask="00-00-0000" />
-                            </mat-form-field>
-                        </div>
-                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
-                            <mat-form-field fxFlex="100s" appearance="outline">
-                                <mat-label>{{'generic.login'|translate}}</mat-label>
+                            <mat-form-field fxFlex="100" appearance="outline">
+                                <mat-label>{{"edit_profile.login" | translate}}</mat-label>
                                 <input matInput placeholder="Login" formControlName="login" />
                             </mat-form-field>
                         </div>
-                    </div>
-                </form>
-                <div fxFlex="100" fxLayoutGap="16px" class="button-dialog">
-                    <button mat-flat-button color="primary" fxFlex="100">
-                        Salvar
-                    </button>
+                        <div class="navigation-buttons" fxLayoutAlign="center end" fxLayoutGap="16px">
+                            <button mat-flat-button color="primary">{{"salve_btn" | translate}}</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="form-login" fxLayout="column">
-                <form>
-                    <div fxLayout="column">
-                        <div fxFlex="100" fxLayoutGap="16px">
-                            <h2 fxFlexAlign="center">Editar Senha</h2>
-                        </div>
-                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
+            <div class="division-right">
+                <div class="division-right-content">
+                    <form [formGroup]="userForm" style="width:85%">
+                        <div class="content-form-login">
+                            <div fxFlex="100" fxLayoutGap="16px">
+                                <h2 fxFlexAlign="center">
+                                    {{"edit_profile.edit_password.name" |
+                                    translate}}</h2>
+                            </div>
                             <mat-form-field appearance="outline">
-                                <mat-label>Senha Atual</mat-label>
-                                <input matInput placeholder="Login" formControlName="login" />
+                                <mat-label>{{"edit_profile.edit_password.current_password" | translate}}</mat-label>
+                                <input matInput placeholder="Senha Atual" formControlName="currentPassword" />
                             </mat-form-field>
-                        </div>
-                        <div fxLayout="row" fxFlex="100" fxLayoutGap="16px">
-
                             <mat-form-field fxFlex="100" appearance="outline">
-                                <mat-label>Nova Senha</mat-label>
-                                <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
+                                <mat-label>{{"edit_profile.edit_password.new_password" | translate}}</mat-label>
+                                <input matInput placeholder="Nova Senha" formControlName="newPassword" />
+                            </mat-form-field>
+                            <mat-form-field fxFlex="230" appearance="outline">
+                                <mat-label>{{"edit_profile.edit_password.confirm_password" | translate}}</mat-label>
+                                <input matInput formControlName="confirmPassword" placeholder="Confirmar Senha" />
                             </mat-form-field>
                         </div>
-                        <div fxFlex="100" fxLayoutGap="16px" fxFlexAlign="start">
-                            <mat-form-field fxFlex="100" appearance="outline">
-                                <mat-label>Con</mat-label>
-                                <input matInput formControlName="birthDate" placeholder="Data Aniversário"
-                                    mask="00-00-0000" />
-                            </mat-form-field>
+                        <div class="navigation-buttons" fxLayoutAlign="center end" fxLayoutGap="16px">
+                            <button mat-flat-button color="primary">{{"salve_btn" | translate}}</button>
                         </div>
-
-                    </div>
-                </form>
-                <div fxFlex="100" fxLayoutGap="16px" class="button-dialog" fxLayoutAlign="start end">
-                    <button mat-flat-button color="primary" fxFlex="100">
-                        Salvar
-                    </button>
+                    </form>
                 </div>
             </div>
-        </div>
-        <div fxLayout="column" fxFlexAlign="end">
-
         </div>
     </div>
+</div>

@@ -25,27 +25,29 @@
     </div>
   </div>
 
-  <app-edit-tab [hidden]="step != 1" (onChange)="handleChanges($event)">
+  <app-edit-tab *ngIf="collaboratorForm" [hidden]="step != 1" (onChange)="handleChanges($event)"
+    [collaboratorForm]="collaboratorForm" [userForm]="userForm">
   </app-edit-tab>
 
-  <app-edit-education-tab [hidden]="step != 2" (onChange)="handleChanges($event)">
+  <app-edit-education-tab *ngIf="collaboratorForm" [hidden]="step != 2" (onChange)="handleChanges($event)"
+    [collaboratorForm]="collaboratorForm">
   </app-edit-education-tab>
 
-  <app-edit-skill-tab [hidden]="step != 3" (onChange)="handleChanges($event)">
+  <app-edit-skill-tab *ngIf="collaboratorForm" [hidden]="step != 3" (onChange)="handleChanges($event)"
+    [collaboratorForm]="collaboratorForm">
   </app-edit-skill-tab>
 
-  <app-edit-panel-tab [hidden]="step != 4" (onChange)="handleChanges($event)">
+  <app-edit-panel-tab *ngIf="collaboratorForm" [hidden]="step != 4" (onChange)="handleChanges($event)">
   </app-edit-panel-tab>
 
   <div class="navigation-buttons" fxLayoutAlign="center end" fxLayoutGap="16px">
 
-    <button mat-flat-button *ngIf="step != 4" (click)="navigate('next')" color="primary">
-      Continuar
-    </button>
     <button mat-button *ngIf="step != 1" (click)="navigate('back')">
       Voltar
     </button>
-
+    <button mat-flat-button *ngIf="step != 4" (click)="navigate('next')" color="primary">
+      Continuar
+    </button>
 
   </div>
 </div>

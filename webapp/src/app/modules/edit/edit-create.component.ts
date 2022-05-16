@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DocumentValidator } from 'src/app/validators/document.validator';
 
 @Component({
   selector: 'app-edit-create',
@@ -8,26 +10,42 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class EditCreateComponent implements OnInit {
 
+  collaboratorForm!: FormGroup;
+  userForm!: FormGroup;
   step: any = 1;
   validations = [
 
   ];
 
-  constructor() { }
+  constructor(private fb: FormBuilder,) { }
 
   ngOnInit(): void {
+    this.initForm();
   }
 
   handleChanges(value: any): void { }
 
   handleStep(number: number): void {
-    if (this.step < number) {
-      //this.snackbarService.showAlert('Verifique os campos');
-    } else if (this.step - number < 1) {
-      this.step = number;
-    } else {
-      this.step = number;
-    }
+    this.step = number;
+
+  }
+
+  initForm() {
+    this.collaboratorForm = this.fb.group({
+      firstNameCorporateName: [null, Validators.required],
+      lastNameFantasyName: [null, Validators.required],
+      cpf: this.fb.control({ value: null, disabled: false }, [
+        DocumentValidator.isValidCpf(),
+      ]),
+      birthDate: [null, Validators.required],
+      login: [null, Validators.required],
+    });
+
+    this.userForm = this.fb.group({
+      currentPassword: [null, Validators.required],
+      newPassword: [null, Validators.required],
+      confirmPassword: [null, Validators.required]
+    })
   }
 
   navigate(direction: string) {

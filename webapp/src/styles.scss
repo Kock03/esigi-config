@@ -20,15 +20,11 @@ $esigi-projects-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$esigi-projects-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $esigi-projects-primary,
-      accent: $esigi-projects-accent,
-      warn: $esigi-projects-warn,
-    ),
-  )
-);
+$esigi-projects-theme: mat.define-light-theme((color: (primary: $esigi-projects-primary,
+        accent: $esigi-projects-accent,
+        warn: $esigi-projects-warn,
+      ),
+    ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -202,7 +198,13 @@ html {
   background-color: #673ab7 !important;
 }
 
+.button-dialog {
+  margin-left: 140px;
+}
 
+.title-dialog {
+  text-align: center;
+}
 
 html,
 body {

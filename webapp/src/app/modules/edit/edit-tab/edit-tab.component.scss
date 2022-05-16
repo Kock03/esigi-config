@@ -1,20 +1,79 @@
-#wrapper {
+#editTab {
     display: flex;
-    border: 1px solid black;
+    width: 100%;
 }
 
-#first {
-    border: 1px solid red;
+.section {
+    background-color: rgb(226, 202, 202);
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
-#second {
-    border: 1px solid green;
+.division-left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
 }
 
-.form-login {
-    margin-right: 290px;
+.division-left-content {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35px;
 }
 
-.fomr-edit {
-    margin-left: 100px;
+.form-collaborator-line-1 {
+    display: inline-block;
+    max-width: 100vw;
+    width: 150px;
+
+}
+
+
+.division-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+
+
+.division-right-content {
+    width: 500px;
+    margin-left: 208px;
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-upload>input {
+    display: none;
+}
+
+.image-upload {
+    img {
+        width: 100px;
+        border-radius: 50px;
+        margin-right: 5px;
+        height: 100px;
+        border: 3px solid #673ab7;
+    }
+}
+
+.edit-profile-title {
+    margin-left: 20px;
 }
