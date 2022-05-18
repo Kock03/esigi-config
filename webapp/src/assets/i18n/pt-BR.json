@@ -1,0 +1,115 @@
+{
+  "user": "Usuário",
+  "password": "Senha",
+  "error_small_password": "Senha muito pequena",
+  "error_long_password": "senha muito grande",
+  "error_user_required": "Campo usuário é obrigatório",
+  "error_password_required": "Campo senha é obrigatório",
+  "connect": "Conectar",
+  "menuName": "Cargos Clientes",
+  "back_btn": "Voltar",
+  "delete_btn": "Deletar",
+  "name": "Nome",
+  "index_title": "Configurações",
+  "app_component": {
+    "edit": "Editar",
+    "logout_span": "Logout"
+  },
+  "active_directory": {
+    "ad_connection": "Conexão Active Directory",
+    "ad_address": "Endereço AD",
+    "error_ad_address_required": "Campo endereço AD é obrigatório"
+  },
+  "email_config": {
+    "server_config": "Configuração De Servidor",
+    "server_type": "Tipo de Servidor",
+    "entry_server": "Servidor De Entrada",
+    "server": "Servidor",
+    "port": "Porta",
+    "ssl_tls_text": "Este servidor requer uma conexão criptografada(SSL/TLS)",
+    "cryptography_method": "Método de Criptografia",
+    "spa_text": "Este login usando Autenticação de Senha de Segurança(SPA)",
+    "exit_server": "Servidor De Saída",
+    "none": "Nenhum",
+    "automatic": "Automático"
+  },
+  "register_initial": {
+    "client_register": "Cadastro de clientes",
+    "collaborator_register": "Cadastro de colaboradores",
+    "project_register": "Cadastro de projetos",
+    "financial_register": "Cadastro Financeiro",
+    "generic_register": "Cadastro de genéricos"
+  },
+  "edit_profile": {
+    "name": "Editar Perfil",
+    "corporate_name": "Nome/Razão Social",
+    "surname_fantasy_name": "Sobrenome/Nome Fantasia",
+    "cpf": "CPF",
+    "birth_date": "Data Aniversário",
+    "login": "Login",
+    "edit_password": {
+      "name": "Editar Senha",
+      "current_password": "Senha Atual",
+      "new_password": "Nova Senha",
+      "confirm_password": "Confirmar Senha"
+    },
+    "education": {
+      "name": "Educação",
+      "schooling": {
+        "name": "Escolaridade",
+        "type": {
+          "elementary_school": "Ensino Fundamental",
+          "high_school": "Ensino Médio",
+          "university_education": "Ensino Superior"
+        },
+        "situation": {
+          "name": "Situação",
+          "stop": "Parado",
+          "complete": "Completo",
+          "in_progress": "Em Andamento"
+        },
+        "course": "Curso",
+        "institution": "Instituição"
+      },
+      "languages": {
+        "name": "Idiomas",
+        "one_language": "Idioma",
+        "fluency": {
+          "name": "Grau de Fluência",
+          "all_options": "Leitura, Escrita e Conversação",
+          "writing": "Escrita",
+          "reading": "Leitura",
+          "conversation": "Conversação",
+          "writing_and_reading": "Escrita e Leitura",
+          "writing_and_conversation": "Escrita e Conversação",
+          "reading_and_conversation": "Leitura e Conversação"
+        }
+      }
+    },
+    "skills": {
+      "skill_registration": "Cadastro de Skill",
+      "name": "Skills",
+      "technology": "Tecnologia",
+      "current_position": "Posição Atual",
+      "time_experience": "Tempo de experiência",
+      "seniority": {
+        "name": "Senioridade",
+        "senior": "Senior",
+        "full": "Pleno",
+        "junior": "Junior",
+        "apprentice": "Aprendiz",
+        "specialist": "Especialista",
+        "architect": "Arquiteto"
+      }
+    },
+    "project": "Projeto",
+    "paper": "Papel",
+    "start_date": "Data Inicio",
+    "end_date": "Data Fim",
+    "hours_run": "Horas Executadas",
+    "manager": "Gestor",
+    "client": "Cliente"
+  },
+  "cancel_btn": "Cancelar",
+  "salve_btn": "Salvar"
+}

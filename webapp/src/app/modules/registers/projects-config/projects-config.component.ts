@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { PROJECT_MENU_LIST } from './projects-config-list';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
 import { MenuItem } from '../_menu-item';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects-config',
@@ -15,7 +16,8 @@ export class ProjectsConfigComponent implements OnInit {
 
   constructor(
     private configDialogService: ConfigDialogService,
-    private router: Router
+    private router: Router,
+    public translateService: TranslateService
   ) {}
 
   ngOnInit(): void {}

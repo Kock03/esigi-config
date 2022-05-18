@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
 import { MenuItem } from '../_menu-item';
 import { GENERIC_MENU_LIST } from './gereric-config-list';
@@ -15,7 +16,8 @@ export class GenericConfigComponent implements OnInit {
 
   constructor(
     private configDialogService: ConfigDialogService,
-    private router: Router) { }
+    private router: Router,
+    public translateService: TranslateService) { }
 
   ngOnInit(): void {
   }

@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { EmailCreateComponent } from './email-create/email-create.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -34,6 +35,7 @@ const routes: Routes = [
     RouterModule,
     MatInputModule,
     MatButtonModule,
+    TranslateModule.forChild(),
     MatSelectModule,
     MatCheckboxModule,
     MatFormFieldModule,

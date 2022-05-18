@@ -5,6 +5,7 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-config-dialog',
@@ -21,7 +22,8 @@ export class ConfigDialogComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef: MatDialogRef<ConfigDialogComponent>
+    public dialogRef: MatDialogRef<ConfigDialogComponent>,
+    public translateService: TranslateService
   ) {}
 
   ngOnInit(): void {

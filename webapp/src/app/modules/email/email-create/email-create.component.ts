@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface emailTypes {
   id: number;
@@ -24,7 +25,7 @@ export class EmailCreateComponent implements OnInit {
     { id: 3, name: 'IMAP' },
   ];
 
-  constructor(private router: Router, private fb: FormBuilder) {}
+  constructor(private router: Router, private fb: FormBuilder, public translateService: TranslateService) {}
 
   ngOnInit(): void {
     this.initForm();

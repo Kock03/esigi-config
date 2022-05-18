@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-registers-initial',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegistersInitialComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public translateService: TranslateService) { }
 
   ngOnInit(): void {
   }

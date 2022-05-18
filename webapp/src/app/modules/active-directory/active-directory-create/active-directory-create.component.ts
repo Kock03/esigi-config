@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-active-directory-create',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class ActiveDirectoryCreateComponent implements OnInit {
   @Input('form') settingForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder, private router: Router, public translateService: TranslateService) {}
 
   ngOnInit(): void {
     this.initForm();

@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { ActiveDirectoryCreateComponent } from './active-directory-create/active-directory-create.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     FlexLayoutModule,
     RouterModule,
     MatInputModule,
+    TranslateModule.forChild(),
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,

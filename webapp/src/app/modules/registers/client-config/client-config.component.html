@@ -6,7 +6,7 @@
           <button class="config-box" mat-stroked-button fxLayout="column" (click)="openModal(menu)" >
             <div class="config-name" fxLayoutAlign="start center">
               <mat-icon class="icon">{{menu.icon}}</mat-icon>
-              <h3>{{menu.menuName}}</h3>
+              <h3>{{menu.menuName |  translate }}</h3>
             </div>
           </button>
         </div>
@@ -20,5 +20,5 @@
   color="primary"
   mat-flat-button
 >
-  <mat-icon> chevron_left </mat-icon> Voltar
+  <mat-icon> chevron_left </mat-icon>{{ "back_btn" | translate }}
 </button>

@@ -18,8 +18,12 @@
     <img
       class="avatar mat-elevation-z8"
       src="https://st.depositphotos.com/1734074/4228/v/450/depositphotos_42286141-stock-illustration-vector-man-with-mustache-in.jpg" />
-    <h4 class="name">Usuário</h4>
-    <p class="designation">Função</p>
+    <h4 class="name">{{ "user" | translate }}</h4>
+    <p class="designation">
+      <button  class="buttom-edit" (click)="viewEdit()">
+        {{ "app_component.edit" | translate }}
+      </button>
+    </p>
 
     <mat-divider></mat-divider>
 
@@ -38,7 +42,7 @@
 
     <button mat-button class="menu-button logout">
       <mat-icon>exit_to_app</mat-icon>
-      <span>Logout</span>
+      <span>{{ "app_component.logout_span" | translate }}</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
