@@ -24,6 +24,12 @@ export class AppComponent {
       action: 'home',
     },
     {
+      name: 'Acesso Segurança',
+      icon: 'security',
+      selected: false,
+      action: 'seguranca/portal',
+    },
+    {
       name: 'Active Directory',
       icon: 'admin_panel_settings',
       selected: false,
