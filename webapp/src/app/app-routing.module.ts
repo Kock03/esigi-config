@@ -35,7 +35,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/registers/registers.module').then((m) => m.RegistersModule),
   },
-
+  {
+    path: 'seguranca',
+    loadChildren: () =>
+      import('./modules/access-security/access-security.module').then((m) => m.AccessSecurityModule),
+  },
 ];
 
 
