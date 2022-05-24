@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AccessSecurityPortalComponent } from './access-security-portal/access-security-portal.component';
 import { AccessSecurityScreensComponent } from './access-security-screens/access-security-screens.component';
 import { AccessSecurityProfileComponent } from './access-security-profile/access-security-profile.component';
+import { AccessSecurityModuleRegisterComponent } from './access-security-module-register/access-security-module-register.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
   declarations: [
     AccessSecurityPortalComponent,
     AccessSecurityScreensComponent,
-    AccessSecurityProfileComponent
+    AccessSecurityProfileComponent,
+    AccessSecurityModuleRegisterComponent
   ],
   imports: [
     CommonModule,

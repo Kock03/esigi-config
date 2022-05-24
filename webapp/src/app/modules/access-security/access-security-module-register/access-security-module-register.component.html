@@ -1,0 +1,20 @@
+<div id="moduleRegister" class="page">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <h3>Cadastro de Módulos</h3>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Identificador</mat-label>
+            <input matInput placeholder="Identificador" formControlName="identificador" />
+        </mat-form-field>
+        <mat-checkbox 
+            class="checkbox" color="primary" fxFlex="10" formControlName="active" fxLayoutAlign="center center"
+            >Inativo</mat-checkbox>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start">
+        <mat-form-field fxFlex="70" appearance="outline">
+            <mat-label>Nome do Módulo</mat-label>
+            <input matInput placeholder="Nome do Módulo" formControlName="moduleName" />
+        </mat-form-field>
+    </div>
+</div>
