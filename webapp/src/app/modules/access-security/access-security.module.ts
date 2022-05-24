@@ -27,7 +27,6 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-<<<<<<< HEAD
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
@@ -35,11 +34,5 @@ const routes: Routes = [
     MatButtonModule
 
   ]
-=======
-    RouterModule.forChild(routes),
-    RouterModule,
-  ],
-  entryComponents: [AccessSecurityPortalComponent],
->>>>>>> 0cd0f545f9209ba480c3b1720f2cf1c7db0245b5
 })
 export class AccessSecurityModule { }
