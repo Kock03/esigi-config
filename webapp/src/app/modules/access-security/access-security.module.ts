@@ -31,8 +31,10 @@ const routes: Routes = [
     MatFormFieldModule,
     MatTabsModule,
     FlexLayoutModule,
-    MatButtonModule
-
-  ]
+    MatButtonModule,
+    RouterModule.forChild(routes),
+    RouterModule,
+  ],
+  entryComponents: [AccessSecurityPortalComponent],
 })
 export class AccessSecurityModule { }
