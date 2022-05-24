@@ -1,1 +1,25 @@
-<p>access-security-portal works!</p>
+<div #portal class="page">
+  <div class="portal-content" fxLayout="row wrap" fxLayoutAlign="center">
+    <div class="box-management-blue" (click)="openSecurityModule()">
+      <img
+        src="../../../assets/icons/blue-rocket-icon.png"
+        class="rocket-button"
+      />
+      <a>Cadastro de Módulo</a>
+    </div>
+    <div class="box-management-purple" (click)="openSecurityScreen()"  >
+      <img
+        src="../../../assets/icons/purple-rocket-icon.png"
+        class="rocket-button"
+      />
+      <a>Cadastro de Tela</a>
+    </div>
+    <div class="box-management-blue" (click)="openSecurityProfile()">
+      <img
+        src="../../../assets/icons/blue-rocket-icon.png"
+        class="rocket-button"
+      />
+      <a>Cadastro de Perfil</a>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,18 @@ const routes: Routes = [
     path: 'portal',
     component: AccessSecurityPortalComponent,
   },
+  {
+    path: 'module',
+    component: AccessSecurityModuleRegisterComponent,
+  },
+  {
+    path: 'tela',
+    component: AccessSecurityScreensComponent,
+  },
+  {
+    path: 'perfil',
+    component: AccessSecurityProfileComponent,
+  },
 ];
 
 @NgModule({
@@ -23,7 +35,7 @@ const routes: Routes = [
     AccessSecurityPortalComponent,
     AccessSecurityScreensComponent,
     AccessSecurityProfileComponent,
-    AccessSecurityModuleRegisterComponent
+    AccessSecurityModuleRegisterComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +47,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     RouterModule,
   ],
-  entryComponents: [AccessSecurityPortalComponent],
+  entryComponents: [
+    AccessSecurityPortalComponent,
+    AccessSecurityModuleRegisterComponent,
+  ],
 })
 export class AccessSecurityModule { }

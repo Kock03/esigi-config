@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-access-security-portal',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessSecurityPortalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  openSecurityModule(){
+    this.router.navigate(['seguranca/module']);
+  }
+
+  openSecurityScreen(){
+    this.router.navigate(['seguranca/tela']);
+  }
+
+  openSecurityProfile(){
+    this.router.navigate(['seguranca/perfil']);
   }
 
 }
