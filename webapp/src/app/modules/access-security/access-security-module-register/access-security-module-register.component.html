@@ -2,19 +2,27 @@
     <div fxLayout="row" fxLayoutAlign="start start">
         <h3>Cadastro de Módulos</h3>
     </div>
-    <div fxLayout="row" fxLayoutAlign="start start">
-        <mat-form-field fxFlex="20" appearance="outline">
+    <div fxLayout="row" fxFlex="100" fxLayoutAlign="start">
+        <mat-form-field fxFlex="50" appearance="outline">
             <mat-label>Identificador</mat-label>
             <input matInput placeholder="Identificador" formControlName="identificador" />
         </mat-form-field>
         <mat-checkbox 
-            class="checkbox" color="primary" fxFlex="10" formControlName="active" fxLayoutAlign="center center"
+            class="checkbox" color="primary" fxFlex="20" formControlName="active"
             >Inativo</mat-checkbox>
     </div>
-    <div fxLayout="row" fxLayoutAlign="start">
+    <div fxLayout="row" fxFlex="100" fxLayoutAlign="start">
         <mat-form-field fxFlex="70" appearance="outline">
             <mat-label>Nome do Módulo</mat-label>
             <input matInput placeholder="Nome do Módulo" formControlName="moduleName" />
         </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <button
+            mat-flat-button
+            (click)="saveModule()"
+            color="primary">
+            Salvar
+        </button>
     </div>
 </div>
