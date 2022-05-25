@@ -1,52 +1,40 @@
-<div  id="screenPage">
-    <div class="content-scroll" fxLayout="row" fxLayoutAlign="start start">
-        <button color="primary" mat-button>
-            <mat-icon class="back-icon"> chevron_left </mat-icon>
-        </button>
-        <h2>Telas</h2>
+<div id="screenDialog">
+    <div class="button-config-dialog-control">
+        <mat-panel-title class="config-box" fxLayout="row">
+            <mat-icon class="icon-config-dialog">account_circle</mat-icon>
+            <button disabled class="button-config" mat-button>
+                <h2 fxLayoutAlign="start">Telas</h2>
+            </button>
+            <button class="cancel-icon-config"  mat-button>
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-panel-title>
     </div>
 
     <div fxLayout="column" class="content-scroll" *ngIf="screenForm">
         <form [formGroup]="screenForm" fxLayout="column">
-            <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
-                <h4>Telas</h4>
-                <mat-form-field appearance="outline" fxFlex="25">
-                    <mat-label>bbbfb</mat-label>
-                    <mat-select formControlName="name">
-                        <mat-option [value]="1"> bbbf </mat-option>
-                        <mat-option [value]="2"> bgbb </mat-option>
-                        <mat-option [value]="3"> bgbgbgf </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
 
-            <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
-                <h4>Telas</h4>
-                <mat-form-field appearance="outline" fxFlex="25">
-                    <mat-label>bgbgbg</mat-label>
-                    <mat-select formControlName="number">
-                        <mat-option [value]="1"> bgbg </mat-option>
-                        <mat-option [value]="2"> bgbg </mat-option>
-                        <mat-option [value]="3"> bgbgb </mat-option>
-                    </mat-select>
+            <div fxFlex="100" fxLayoutAlign="space-between" fxLayoutGap="25px">
+                <mat-form-field fxFlex="50" appearance="outline">
+                    <mat-label>Módulo</mat-label>
+                    <input matInput placeholder="Módulo" formControlName="moduleName" />
+                </mat-form-field>
+                <mat-form-field fxFlex="50" appearance="outline">
+                    <mat-label>Identificador</mat-label>
+                    <input matInput placeholder="Identificador" formControlName="identifier" />
                 </mat-form-field>
             </div>
-
-            <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
-                <h4>Telas</h4>
-                <mat-form-field appearance="outline" fxFlex="25">
-                    <mat-label>gbgb</mat-label>
-                    <input matInput disableRipple formControlName="active" />
+            <div fxFlex="100" fxLayoutAlign="start" fxLayoutGap="25px">
+                <mat-form-field fxFlex="50" appearance="outline">
+                    <mat-label>Nome da tela</mat-label>
+                    <input matInput placeholder="Nome da tela" formControlName="screenName" />
                 </mat-form-field>
-            </div>
-            <div class="form-group-content" fxFlex="100" fxLayoutGap="1px">
-                <h4>Telas</h4>
-                <mat-checkbox class="checkbox" color="primary" fxFlex="10" formControlName="active"
-                    fxLayoutAlign="center center"></mat-checkbox>
+                <mat-checkbox fxLayoutAlign="start center" class="checkbox" color="primary" fxFlex="50" formControlName="active">Inativo
+                </mat-checkbox>
             </div>
         </form>
     </div>
-    <div class="navigation-buttons" fxLayoutAlign="center end" class="saveButton" fxLayoutGap="16px">
+    <div class="navigation-buttons" fxLayoutAlign="center start" class="saveButton" fxLayoutGap="16px">
         <button mat-flat-button color="primary">Salvar</button>
     </div>
 </div>

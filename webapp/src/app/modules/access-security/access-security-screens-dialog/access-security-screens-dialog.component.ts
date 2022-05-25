@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-access-security-screens-dialog',
@@ -12,6 +13,7 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -20,11 +22,15 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
 
   initForm(){
     this.screenForm = this.fb.group({
-      name: [''],
-      number: [''],
-      active: [''],
-      cnpj: ['']
+      moduleName: [''],
+      identifier: [''],
+      screenName: [''],
+      active: ['']
     })
+  }
+
+  goBackButton(){
+      this.router.navigate(['/seguranca/portal']);
   }
 
 }
