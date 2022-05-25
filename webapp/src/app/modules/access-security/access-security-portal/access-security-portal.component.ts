@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import {
   MatDialog,
 } from '@angular/material/dialog';
-import { AccesSecurityScreensDialogComponent } from '../acces-security-screens-dialog/acces-security-screens-dialog.component';
+import { AccessSecurityScreensDialogComponent } from '../access-security-screens-dialog/access-security-screens-dialog.component';
 import { AccessSecurityModuleRegisterDialog } from '../access-security-module-register/access-security-module-register.dialog';
 
 @Component({
@@ -43,7 +43,7 @@ export class AccessSecurityPortalComponent implements OnInit {
   openDialogScreens(){
     this.method = 'add';
     sessionStorage.setItem('method', this.method);
-    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+    const dialogRef = this.dialog.open(AccessSecurityScreensDialogComponent, {
       width: '500px',
       height: '650px',
     });
@@ -58,7 +58,7 @@ export class AccessSecurityPortalComponent implements OnInit {
   openDialogProfile(){
     this.method = 'add';
     sessionStorage.setItem('method', this.method);
-    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+    const dialogRef = this.dialog.open(AccessSecurityScreensDialogComponent, {
       width: '500px',
       height: '650px',
     });

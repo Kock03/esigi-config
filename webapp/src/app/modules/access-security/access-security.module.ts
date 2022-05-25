@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { AccesSecurityScreensDialogComponent } from './acces-security-screens-dialog/acces-security-screens-dialog.component';
+import { AccessSecurityScreensDialogComponent } from './access-security-screens-dialog/access-security-screens-dialog.component';
 import { AccessSecurityModuleRegisterDialog } from './access-security-module-register/access-security-module-register.dialog';
 
 
@@ -42,7 +42,7 @@ const routes: Routes = [
     AccessSecurityScreensComponent,
     AccessSecurityProfileComponent,
     AccessSecurityModuleRegisterDialog,
-    AccesSecurityScreensDialogComponent,
+    AccessSecurityScreensDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +62,7 @@ const routes: Routes = [
   entryComponents: [
     AccessSecurityPortalComponent,
     AccessSecurityModuleRegisterDialog,
-    AccesSecurityScreensDialogComponent
+    AccessSecurityScreensDialogComponent
   ],
 })
 export class AccessSecurityModule { }
