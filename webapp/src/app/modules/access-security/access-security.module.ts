@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIcon } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const routes: Routes = [
   {
@@ -42,7 +44,9 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
+    MatIcon,
     FlexLayoutModule,
+    MatCheckboxModule,
     MatButtonModule,
     RouterModule.forChild(routes),
     RouterModule,
