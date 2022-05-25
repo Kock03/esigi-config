@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { AccessSecurityPortalComponent } from './access-security-portal/access-security-portal.component';
 import { AccessSecurityScreensComponent } from './access-security-screens/access-security-screens.component';
 import { AccessSecurityProfileComponent } from './access-security-profile/access-security-profile.component';
-import { AccessSecurityModuleRegisterComponent } from './access-security-module-register/access-security-module-register.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -14,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AccessSecurityModuleRegisterDialog } from './access-security-module-register/access-security-module-register.dialog';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'module',
-    component: AccessSecurityModuleRegisterComponent,
+    component: AccessSecurityModuleRegisterDialog,
   },
   {
     path: 'tela',
@@ -39,7 +39,7 @@ const routes: Routes = [
     AccessSecurityPortalComponent,
     AccessSecurityScreensComponent,
     AccessSecurityProfileComponent,
-    AccessSecurityModuleRegisterComponent,
+    AccessSecurityModuleRegisterDialog,
   ],
   imports: [
     CommonModule,
@@ -58,7 +58,7 @@ const routes: Routes = [
   ],
   entryComponents: [
     AccessSecurityPortalComponent,
-    AccessSecurityModuleRegisterComponent,
+    AccessSecurityModuleRegisterDialog,
   ],
 })
 export class AccessSecurityModule { }
