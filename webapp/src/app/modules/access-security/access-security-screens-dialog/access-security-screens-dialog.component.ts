@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-access-security-screens-dialog',
   templateUrl: './access-security-screens-dialog.component.html',
-  styleUrls: ['./access-security-screens-dialog.component.scss']
+  styleUrls: ['./access-security-screens-dialog.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AccessSecurityScreensDialogComponent implements OnInit {
   screenForm!: FormGroup;

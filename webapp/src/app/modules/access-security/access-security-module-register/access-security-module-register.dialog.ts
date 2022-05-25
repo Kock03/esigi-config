@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-access-security-module-register',
   templateUrl: './access-security-module-register.dialog.html',
-  styleUrls: ['./access-security-module-register.dialog.scss']
+  styleUrls: ['./access-security-module-register.dialog.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AccessSecurityModuleRegisterDialog implements OnInit {
 
