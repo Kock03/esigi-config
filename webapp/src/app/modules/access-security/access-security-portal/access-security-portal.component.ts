@@ -5,6 +5,7 @@ import {
   MatDialog,
 } from '@angular/material/dialog';
 import { AccesSecurityScreensDialogComponent } from '../acces-security-screens-dialog/acces-security-screens-dialog.component';
+import { AccessSecurityModuleRegisterDialog } from '../access-security-module-register/access-security-module-register.dialog';
 
 @Component({
   selector: 'app-access-security-portal',
@@ -27,7 +28,7 @@ export class AccessSecurityPortalComponent implements OnInit {
   openDialogModule() {
     this.method = 'add';
     sessionStorage.setItem('method', this.method);
-    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+    const dialogRef = this.dialog.open(AccessSecurityModuleRegisterDialog, {
       width: '500px',
       height: '650px',
     });
