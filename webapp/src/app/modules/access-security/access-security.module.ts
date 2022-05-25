@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const routes: Routes = [
   {
@@ -45,7 +46,9 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
+    MatIconModule,
     FlexLayoutModule,
+    MatCheckboxModule,
     MatButtonModule,
     RouterModule.forChild(routes),
     RouterModule,
