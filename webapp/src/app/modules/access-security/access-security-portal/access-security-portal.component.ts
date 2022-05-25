@@ -5,7 +5,7 @@ import {
   MatDialog,
 } from '@angular/material/dialog';
 import { AccessSecurityScreensDialogComponent } from '../access-security-screens-dialog/access-security-screens-dialog.component';
-import { AccessSecurityModuleRegisterDialog } from '../access-security-module-register/access-security-module-register.dialog';
+import { AccessSecurityModuleRegisterDialog } from '../access-security-module-register-dialog/access-security-module-register.dialog';
 import { AccessSecurityProfileDialogComponent } from '../access-security-profile-dialog/access-security-profile-dialog.component';
 
 @Component({
