@@ -1,1 +1,66 @@
-<p>access-security-screens works!</p>
+<div class="page" id="screenPage">
+  <div fxLayout="row" fxLayoutAlign="start start">
+    <button color="primary" mat-button>
+      <mat-icon class="back-icon"> chevron_left </mat-icon>
+    </button>
+    <h2>Telas</h2>
+  </div>
+
+  <div fxLayout="column" class="content-scroll" *ngIf="screenForm">
+    <form [formGroup]="screenForm" fxLayout="column">
+      <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
+        <h4>Telas</h4>
+        <mat-form-field appearance="outline" fxFlex="25">
+          <mat-label>bbbfb</mat-label>
+          <mat-select formControlName="name">
+            <mat-option [value]="1"> bbbf </mat-option>
+            <mat-option [value]="2"> bgbb </mat-option>
+            <mat-option [value]="3"> bgbgbgf </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
+        <h4>Telas</h4>
+        <mat-form-field appearance="outline" fxFlex="25">
+          <mat-label>bgbgbg</mat-label>
+          <mat-select formControlName="number">
+            <mat-option [value]="1"> bgbg </mat-option>
+            <mat-option [value]="2"> bgbg </mat-option>
+            <mat-option [value]="3"> bgbgb </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group-content" fxFlex="100" fxLayoutGap="25px">
+        <h4>Telas</h4>
+        <mat-form-field appearance="outline" fxFlex="25">
+          <mat-label>gbgb</mat-label>
+          <input matInput disableRipple formControlName="active" />
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div
+    class="navigation-buttons"
+    fxLayoutAlign="center end"
+    class="saveButton"
+    fxLayoutGap="16px"
+  >
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="this.screenForm.invalid"
+    >
+      dfdfd
+    </button>
+  </div>
+  <div
+    class="navigation-buttons"
+    fxLayoutAlign="center end"
+    class="saveButton"
+    fxLayoutGap="16px"
+  >
+    <button mat-flat-button color="primary">vvd</button>
+  </div>
+</div>
