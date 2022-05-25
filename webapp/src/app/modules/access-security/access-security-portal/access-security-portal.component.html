@@ -1,25 +1,45 @@
-<div #portal class="page">
-  <div class="portal-content" fxLayout="row wrap" fxLayoutAlign="center">
-    <div class="box-management-blue" (click)="openSecurityModule()">
-      <img
-        src="../../../assets/icons/blue-rocket-icon.png"
-        class="rocket-button"
-      />
-      <a>Cadastro de Módulo</a>
-    </div>
-    <div class="box-management-purple" (click)="openSecurityScreen()"  >
-      <img
-        src="../../../assets/icons/purple-rocket-icon.png"
-        class="rocket-button"
-      />
-      <a>Cadastro de Tela</a>
-    </div>
-    <div class="box-management-blue" (click)="openSecurityProfile()">
-      <img
-        src="../../../assets/icons/blue-rocket-icon.png"
-        class="rocket-button"
-      />
-      <a>Cadastro de Perfil</a>
+<div id="portal" class="page">
+  <div class="initial-group-box">
+    <div  fxLayout="row wrap" fxLayoutAlign="start">
+      <div>
+        <button
+          class="initial-box"
+          mat-stroked-button
+          fxLayout="column"
+          (click)="moduleRegister()"
+        >
+          <div class="initial-name" fxLayoutAlign="start center">
+            <mat-icon class="icon">person</mat-icon>
+            <h3>Cadastro de módulo</h3>
+          </div>
+        </button>
+      </div>
+      <div>
+        <button
+          class="initial-box"
+          mat-stroked-button
+          fxLayout="column"
+          (click)="screenRegister()"
+        >
+          <div class="initial-name" fxLayoutAlign="start center">
+            <mat-icon class="icon">group</mat-icon>
+            <h3>Cadastro de tela</h3>
+          </div>
+        </button>
+      </div>
+      <div>
+        <button
+          class="initial-box"
+          mat-stroked-button
+          fxLayout="column"
+          (click)="profileRegister()"
+        >
+          <div class="initial-name" fxLayoutAlign="start center">
+            <mat-icon class="icon">work</mat-icon>
+            <h3>Cadastro de perfil</h3>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </div>
