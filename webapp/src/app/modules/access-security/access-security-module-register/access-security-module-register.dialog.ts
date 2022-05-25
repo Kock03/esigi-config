@@ -40,13 +40,6 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
       this.moduleForm.patchValue(this.dataTable);
     }
 
-    this.moduleControl.valueChanges.subscribe((res: { id: any; }) => {
-      if (res && res.id) {
-        this.moduleForm.controls['moduleId'].setValue(res.id, {
-          emiEvent: true
-        });
-      }
-    });
   }
 
 }

@@ -14,6 +14,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AccessSecurityScreensDialogComponent } from './access-security-screens-dialog/access-security-screens-dialog.component';
 import { AccessSecurityModuleRegisterDialog } from './access-security-module-register/access-security-module-register.dialog';
 import { AccessSecurityProfileDialogComponent } from './access-security-profile-dialog/access-security-profile-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 const routes: Routes = [
@@ -56,6 +58,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatSelectModule,
     MatIconModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   entryComponents: [
     AccessSecurityPortalComponent,

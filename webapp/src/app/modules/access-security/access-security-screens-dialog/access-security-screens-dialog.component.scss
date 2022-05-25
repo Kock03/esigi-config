@@ -1,11 +1,17 @@
-#activeTab {
+#screenPage {
+
     .form-box {
         width: 100%;
+    }
+
+    .content-scroll{
+        margin-top: 5px;
     }
 
     .back-icon {
         margin-top: 24px;
     }
+
 
     .form-group-content {
         min-width: 400px;
@@ -21,3 +27,4 @@
         margin-top: 30px;
     }
 }
+
