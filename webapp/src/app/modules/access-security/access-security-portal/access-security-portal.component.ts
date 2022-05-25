@@ -10,21 +10,32 @@ export class AccessSecurityPortalComponent implements OnInit {
 
   constructor(
     private router: Router,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
   }
 
-  openSecurityModule(){
+  openSecurityModule() {
     this.router.navigate(['seguranca/module']);
   }
 
-  openSecurityScreen(){
+  openSecurityScreen() {
     this.router.navigate(['seguranca/tela']);
   }
 
-  openSecurityProfile(){
+  openSecurityProfile() {
     this.router.navigate(['seguranca/perfil']);
   }
 
+  moduleRegister() {
+
+  }
+
+  screenRegister() {
+
+  }
+
+  profileRegister() {
+
+  }
 }
