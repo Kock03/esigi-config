@@ -11,14 +11,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-<<<<<<< HEAD
-import { AccesSecurityScreensDialogComponent } from './acces-security-screens-dialog/acces-security-screens-dialog.component';
+
 import { AccessSecurityModuleRegisterDialog } from './access-security-module-register-dialog/access-security-module-register.dialog';
-=======
 import { AccessSecurityScreensDialogComponent } from './access-security-screens-dialog/access-security-screens-dialog.component';
-import { AccessSecurityModuleRegisterDialog } from './access-security-module-register/access-security-module-register.dialog';
 import { AccessSecurityProfileDialogComponent } from './access-security-profile-dialog/access-security-profile-dialog.component';
->>>>>>> 90c24023f95174c648cc529841f2e097f5c6edbf
 
 
 const routes: Routes = [
