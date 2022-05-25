@@ -1,41 +1,72 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {
+  MatDialog,
+} from '@angular/material/dialog';
+import { AccesSecurityScreensDialogComponent } from '../acces-security-screens-dialog/acces-security-screens-dialog.component';
+
 @Component({
   selector: 'app-access-security-portal',
   templateUrl: './access-security-portal.component.html',
   styleUrls: ['./access-security-portal.component.scss']
 })
+
 export class AccessSecurityPortalComponent implements OnInit {
+
+  method!: string;
 
   constructor(
     private router: Router,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
   }
 
-  openSecurityModule() {
-    this.router.navigate(['seguranca/module']);
+  openDialogModule() {
+    this.method = 'add';
+    sessionStorage.setItem('method', this.method);
+    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+      width: '500px',
+      height: '650px',
+    });
+
+    // dialogRef.afterClosed().subscribe(dependent => {
+    //   if (dependent) {
+    //     this.getDependentsList();
+    //   }
+    // });
   }
 
-  openSecurityScreen() {
-    this.router.navigate(['seguranca/tela']);
+  openDialogScreens(){
+    this.method = 'add';
+    sessionStorage.setItem('method', this.method);
+    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+      width: '500px',
+      height: '650px',
+    });
+
+    // dialogRef.afterClosed().subscribe(dependent => {
+    //   if (dependent) {
+    //     this.getDependentsList();
+    //   }
+    // });
   }
 
-  openSecurityProfile() {
-    this.router.navigate(['seguranca/perfil']);
+  openDialogProfile(){
+    this.method = 'add';
+    sessionStorage.setItem('method', this.method);
+    const dialogRef = this.dialog.open(AccesSecurityScreensDialogComponent, {
+      width: '500px',
+      height: '650px',
+    });
+
+    // dialogRef.afterClosed().subscribe(dependent => {
+    //   if (dependent) {
+    //     this.getDependentsList();
+    //   }
+    // });
   }
 
-  moduleRegister() {
-
-  }
-
-  screenRegister() {
-
-  }
-
-  profileRegister() {
-
-  }
 }
