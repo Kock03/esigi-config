@@ -17,7 +17,6 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     'moduleName',
     'identifier',
     'screenName',
-    'icon',
   ];
   
   constructor(
