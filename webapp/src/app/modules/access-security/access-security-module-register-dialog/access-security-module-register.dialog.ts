@@ -14,10 +14,12 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
   range = new FormGroup({});
   moduleForm!: FormGroup
   
+
   dataTable: [] = [];
   moduleId!: string;
   method: string = '';
   moduleControl: any;
+  Module: any;
   activityId!: string;
   displayedColumns: string[] = ['moduleName', 'identifier', 'icon'];
 
