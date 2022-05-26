@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-access-security-profile-dialog',
   templateUrl: './access-security-profile-dialog.component.html',
-  styleUrls: ['./access-security-profile-dialog.component.scss']
+  styleUrls: ['./access-security-profile-dialog.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AccessSecurityProfileDialogComponent implements OnInit {
 
