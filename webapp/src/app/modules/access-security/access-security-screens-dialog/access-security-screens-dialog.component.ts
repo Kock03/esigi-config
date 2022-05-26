@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,6 +23,7 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    public dialogRef: MatDialogRef<AccessSecurityScreensDialogComponent>,
   ) { }
 
   ngOnInit(): void {
@@ -37,9 +39,9 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     })
   }
 
-  close(){
-      this.router.navigate(['seguranca/portal']);
-      sessionStorage.clear
+  close() {
+    this.dialogRef.close()
+    sessionStorage.clear
   }
 
 }
