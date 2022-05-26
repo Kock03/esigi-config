@@ -4,6 +4,7 @@
 
     .content-scroll{
         margin-top: 30px;
+        padding: 24px;
     }
 
     .button-config-dialog-control {
@@ -50,5 +51,8 @@
         margin-left: 30px;
         margin-right: 30px;
     }
+}
+.mat-dialog-container {
+    padding: 0px!important;
 }
 
