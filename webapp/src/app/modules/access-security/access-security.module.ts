@@ -17,7 +17,7 @@ import { AccessSecurityScreensDialogComponent } from './access-security-screens-
 import { AccessSecurityProfileDialogComponent } from './access-security-profile-dialog/access-security-profile-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { MatTableModule } from '@angular/material/table'; 
 
 const routes: Routes = [
   {
@@ -60,7 +60,8 @@ const routes: Routes = [
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   entryComponents: [
     AccessSecurityPortalComponent,

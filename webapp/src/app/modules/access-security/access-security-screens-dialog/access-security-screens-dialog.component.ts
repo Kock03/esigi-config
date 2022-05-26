@@ -10,6 +10,15 @@ import { Router } from '@angular/router';
 })
 export class AccessSecurityScreensDialogComponent implements OnInit {
   screenForm!: FormGroup;
+  data: [] = [];
+  Screen: any;
+
+  displayedColumns: string[] = [
+    'moduleName',
+    'identifier',
+    'screenName',
+    'icon',
+  ];
   
   constructor(
     private fb: FormBuilder,
@@ -29,8 +38,8 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     })
   }
 
-  goBackButton(){
-      this.router.navigate(['/seguranca/portal']);
+  goBack(){
+      this.router.navigate(['seguranca/portal']);
   }
 
 }
