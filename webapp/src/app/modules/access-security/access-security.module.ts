@@ -14,7 +14,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AccessSecurityModuleRegisterDialog } from './access-security-module-register-dialog/access-security-module-register.dialog';
 import { AccessSecurityScreensDialogComponent } from './access-security-screens-dialog/access-security-screens-dialog.component';
-import { AccessSecurityProfileDialogComponent } from './access-security-profile-dialog/access-security-profile-dialog.component';
+import { AccessSecurityProfileComponent } from './access-security-profile/access-security-profile.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table'; 
@@ -34,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    component: AccessSecurityProfileDialogComponent,
+    component: AccessSecurityProfileComponent,
   },
 ];
 
@@ -43,7 +43,7 @@ const routes: Routes = [
     AccessSecurityPortalComponent,
     AccessSecurityModuleRegisterDialog,
     AccessSecurityScreensDialogComponent,
-    AccessSecurityProfileDialogComponent,
+    AccessSecurityProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -67,7 +67,7 @@ const routes: Routes = [
     AccessSecurityPortalComponent,
     AccessSecurityModuleRegisterDialog,
     AccessSecurityScreensDialogComponent,
-    AccessSecurityProfileDialogComponent
+    AccessSecurityProfileComponent
   ],
 })
 export class AccessSecurityModule { }

@@ -6,7 +6,6 @@ import {
 } from '@angular/material/dialog';
 import { AccessSecurityScreensDialogComponent } from '../access-security-screens-dialog/access-security-screens-dialog.component';
 import { AccessSecurityModuleRegisterDialog } from '../access-security-module-register-dialog/access-security-module-register.dialog';
-import { AccessSecurityProfileDialogComponent } from '../access-security-profile-dialog/access-security-profile-dialog.component';
 
 @Component({
   selector: 'app-access-security-portal',
@@ -57,19 +56,23 @@ export class AccessSecurityPortalComponent implements OnInit {
     // });
   }
 
-  openDialogProfile(){
-    this.method = 'add';
-    sessionStorage.setItem('method', this.method);
-    const dialogRef = this.dialog.open(AccessSecurityProfileDialogComponent, {
-      width: '500px',
-      height: '650px',
-    });
-
-    // dialogRef.afterClosed().subscribe(dependent => {
-    //   if (dependent) {
-    //     this.getDependentsList();
-    //   }
-    // });
+  openProfileTab(){
+    this.router.navigate(['seguranca/perfil']);
   }
+
+  // openDialogProfile(){
+  //   this.method = 'add';
+  //   sessionStorage.setItem('method', this.method);
+  //   const dialogRef = this.dialog.open(AccessSecurityProfileDialogComponent, {
+  //     width: '500px',
+  //     height: '650px',
+  //   });
+
+  //   // dialogRef.afterClosed().subscribe(dependent => {
+  //   //   if (dependent) {
+  //   //     this.getDependentsList();
+  //   //   }
+  //   // });
+  // }
 
 }
