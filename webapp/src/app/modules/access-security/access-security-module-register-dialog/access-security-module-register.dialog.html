@@ -62,24 +62,6 @@
                     </td>
                 </ng-container>
 
-                <ng-container matColumnDef="icon">
-                    
-                    <td class="button-tab" mat-cell *matCellDef="let Module">
-                        <button
-                            class="table-button"
-                            mat-button
-                            >
-                            <mat-icon>edit</mat-icon>
-                        </button>
-
-                        <button
-                            class="table-button"
-                            mat-button
-                            >
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </td>
-                </ng-container>
                 <tr
                     mat-header-row
                     *matHeaderRowDef=" displayedColumns; sticky: true"></tr>
