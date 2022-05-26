@@ -13,8 +13,11 @@
 
     <div class="content-scroll">
         <form fxLayout="column">
-            <div fxLayoutAlign="start start">
-                <h3>Cadastro de Módulos</h3>
+            <div fxFlex="100" fxLayoutAlign="start">
+                <mat-form-field fxFlex="100" appearance="outline">
+                    <mat-label>Nome do Módulo</mat-label>
+                    <input matInput placeholder="Nome do Módulo" formControlName="moduleName" />
+                </mat-form-field>
             </div>
             <div fxFlex="100" fxLayoutAlign="space-between">
                 <mat-form-field fxFlex="50" appearance="outline">
@@ -24,14 +27,8 @@
                 <mat-checkbox class="checkbox" color="primary" fxFlex="30" formControlName="active">Inativo
                 </mat-checkbox>
             </div>
-            <div fxFlex="100" fxLayoutAlign="start">
-                <mat-form-field fxFlex="100" appearance="outline">
-                    <mat-label>Nome do Módulo</mat-label>
-                    <input matInput placeholder="Nome do Módulo" formControlName="moduleName" />
-                </mat-form-field>
-            </div>
             <div fxLayoutAlign="center center">
-                <button mat-flat-button color="primary">
+                <button mat-flat-button color="primary"  [mat-dialog-close]="true">
                     Salvar
                 </button>
             </div>
