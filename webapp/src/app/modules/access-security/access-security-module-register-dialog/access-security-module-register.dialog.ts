@@ -42,4 +42,8 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
 
   }
 
+  close() {
+    this.dialogRef.close()
+    sessionStorage.clear
+  }
 }
