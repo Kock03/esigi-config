@@ -59,20 +59,4 @@ export class AccessSecurityPortalComponent implements OnInit {
   openProfileTab(){
     this.router.navigate(['seguranca/perfil']);
   }
-
-  // openDialogProfile(){
-  //   this.method = 'add';
-  //   sessionStorage.setItem('method', this.method);
-  //   const dialogRef = this.dialog.open(AccessSecurityProfileDialogComponent, {
-  //     width: '500px',
-  //     height: '650px',
-  //   });
-
-  //   // dialogRef.afterClosed().subscribe(dependent => {
-  //   //   if (dependent) {
-  //   //     this.getDependentsList();
-  //   //   }
-  //   // });
-  // }
-
 }
