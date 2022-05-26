@@ -21,7 +21,7 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
   moduleControl: any;
   Module: any;
   activityId!: string;
-  displayedColumns: string[] = ['moduleName', 'identifier', 'icon'];
+  displayedColumns: string[] = ['moduleName', 'identifier', 'active', 'icon'];
 
 
   constructor(
