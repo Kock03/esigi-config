@@ -11,8 +11,8 @@
         </mat-panel-title>
     </div>
 
-    <div class="content-scroll">
-        <form fxLayout="column">
+    <div class="content-scroll" *ngIf="moduleForm">
+        <form [formGroup]="moduleForm" fxLayout="column">
             <div fxFlex="100" fxLayoutAlign="start">
                 <mat-form-field fxFlex="100" appearance="outline">
                     <mat-label>Nome do Módulo</mat-label>
