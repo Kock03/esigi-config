@@ -60,6 +60,7 @@ import { AboutComponent } from './modules/about/about.component';
     ReactiveFormsModule,
     MatInputModule,
     MatTableModule,
+    
 
   ],
   providers: [SnackBarService, ConfigDialogService,],

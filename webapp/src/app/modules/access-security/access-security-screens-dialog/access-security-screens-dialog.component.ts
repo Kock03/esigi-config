@@ -17,7 +17,6 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     'moduleName',
     'identifier',
     'screenName',
-    'icon',
   ];
   
   constructor(
@@ -38,8 +37,9 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     })
   }
 
-  goBack(){
+  close(){
       this.router.navigate(['seguranca/portal']);
+      sessionStorage.clear
   }
 
 }
