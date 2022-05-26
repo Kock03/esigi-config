@@ -1,11 +1,15 @@
 <div id="screenDialog">
-    <div fxLayout="row" class="button-config-dialog-control">
-        <div fxLayoutAlign="start start">
-            <mat-icon class="back-icon" click="goBack()">chevron_left</mat-icon>
-            <h3>Cadastro de Telas</h3>
-        </div>
+    <div class="button-config-dialog-control">
+        <mat-panel-title class="config-box" fxLayout="row">
+            <mat-icon class="icon-config-dialog">account_circle</mat-icon>
+            <button disabled class="button-config" mat-button>
+                <h2 fxLayoutAlign="start">Cadastro de telas</h2>
+            </button>
+            <button (click)="close()" class="cancel-icon-config"  mat-button>
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-panel-title>
     </div>
-
     <div fxLayout="column" class="content-scroll" *ngIf="screenForm">
         <form [formGroup]="screenForm" fxLayout="column">
             <div fxFlex="100" fxLayoutAlign="space-between" fxLayoutGap="25px">

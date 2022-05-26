@@ -38,8 +38,9 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
     })
   }
 
-  goBack(){
+  close(){
       this.router.navigate(['seguranca/portal']);
+      sessionStorage.clear
   }
 
 }
