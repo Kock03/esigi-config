@@ -18,6 +18,7 @@ import { AccessSecurityProfileComponent } from './access-security-profile/access
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table'; 
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -55,6 +56,7 @@ const routes: Routes = [
     MatCheckboxModule,
     MatButtonModule,
     RouterModule.forChild(routes),
+    TranslateModule.forChild(),
     RouterModule,
     ReactiveFormsModule,
     MatSelectModule,
