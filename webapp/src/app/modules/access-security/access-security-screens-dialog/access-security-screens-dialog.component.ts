@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -31,10 +31,9 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
 
   initForm(){
     this.screenForm = this.fb.group({
-      moduleName: [''],
-      identifier: [''],
-      screenName: [''],
-      active: ['']
+      moduleName: ['', Validators.required],
+      identifier: ['', Validators.required],
+      screenName: ['', Validators.required],
     })
   }
 

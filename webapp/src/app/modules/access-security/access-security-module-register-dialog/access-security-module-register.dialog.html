@@ -17,12 +17,20 @@
                 <mat-form-field fxFlex="100" appearance="outline">
                     <mat-label>{{"access_security.module_name" |  translate }}</mat-label>
                     <input matInput placeholder="Nome do Módulo" formControlName="moduleName" />
+                    <mat-error *ngIf="moduleForm &&
+                    moduleForm.controls['moduleName'].hasError('required')">
+                    {{'validators.required' | translate}}
+                  </mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="100" fxLayoutAlign="space-between">
                 <mat-form-field fxFlex="100" appearance="outline">
                     <mat-label>{{"access_security.identifier" |  translate }}</mat-label>
                     <input matInput placeholder="Identificador" formControlName="identifier" />
+                    <mat-error *ngIf="moduleForm &&
+                    moduleForm.controls['identifier'].hasError('required')">
+                    {{'validators.required' | translate}}
+                  </mat-error>
                 </mat-form-field>
             </div>
             <div fxLayoutAlign="center center">

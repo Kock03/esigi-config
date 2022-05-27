@@ -40,8 +40,6 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
     this.moduleForm = this.fb.group({
       moduleName: ['', Validators.required],
       identifier: ['', Validators.required],
-      isActive: [true],
-      activity: { id: this.activityId }
     });
     if (this.dataTable) {
       this.moduleForm.patchValue(this.dataTable);
