@@ -16,7 +16,6 @@ export class AccessSecurityScreensDialogComponent implements OnInit {
 
   displayedColumns: string[] = [
     'moduleName',
-    'identifier',
     'screenName',
   ];
   
