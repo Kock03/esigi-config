@@ -21,7 +21,7 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
   moduleControl: any;
   Module: any;
   activityId!: string;
-  displayedColumns: string[] = ['identifier', 'moduleName', 'active', ];
+  displayedColumns: string[] = ['identifier', 'moduleName', ];
 
 
   constructor(
@@ -84,4 +84,5 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
     this.dialogRef.close()
     sessionStorage.clear
   }
+
 }
