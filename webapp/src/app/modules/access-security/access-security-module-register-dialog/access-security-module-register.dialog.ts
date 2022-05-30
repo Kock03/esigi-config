@@ -21,7 +21,7 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
   moduleControl: any;
   Module: any;
   activityId!: string;
-  displayedColumns: string[] = ['identifier', 'moduleName', 'active', ];
+  displayedColumns: string[] = ['identifier', 'moduleName', ];
 
 
   constructor(
@@ -40,8 +40,6 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
     this.moduleForm = this.fb.group({
       moduleName: ['', Validators.required],
       identifier: ['', Validators.required],
-      isActive: [true],
-      activity: { id: this.activityId }
     });
     if (this.dataTable) {
       this.moduleForm.patchValue(this.dataTable);
@@ -84,4 +82,5 @@ export class AccessSecurityModuleRegisterDialog implements OnInit {
     this.dialogRef.close()
     sessionStorage.clear
   }
+
 }

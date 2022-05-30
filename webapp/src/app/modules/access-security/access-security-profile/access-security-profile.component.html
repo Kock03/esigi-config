@@ -13,7 +13,7 @@
             <div fxFlex="100" fxLayoutAlign="start">
                 <mat-form-field fxFlex="60" appearance="outline">
                     <mat-label>Nome do Perfil</mat-label>
-                    <input matInput placeholder="Nome do Perfil" formControlName="perfilName" />
+                    <input matInput placeholder="Nome do Perfil" formControlName="profileName" />
                 </mat-form-field>
             </div>
 
@@ -32,10 +32,6 @@
                           </button>
                           {{node.name}}
                         </div>
-                        <div [class.example-tree-invisible]="permissionControl.isExpanded(node)"
-                            role="group">
-                          <ng-container matTreeNodeOutlet></ng-container>
-                      </div>
                     </mat-nested-tree-node>
                   </mat-tree>
             </div>
