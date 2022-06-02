@@ -1,6 +1,6 @@
 #profileRegister {
     width: 100%;
-    max-width: 550px !important;
+    max-width: 1200px !important;
 
     .content-scroll{
         margin-top: 10px;
@@ -11,50 +11,12 @@
         margin-top: 20px;
     }
 
-    .button-config-dialog-control {
-        padding: 1px;
-        background: #3f1870;
-
-        h2 {
-            color: #fff;
-            margin-top: 10px;
-        }
-    }
-
-    .button-config {
-        width: 100%;
-    }
-
-    .icon-config-dialog {
-        color: rgb(247, 247, 247);
-        margin-top: 17px;
-        margin-left: 20px;
-    }
-
-    .cancel-icon-config {
-        color: #fff;
-    }
-
-    .envolti-table {
-        margin: auto;
-        margin-top: 40px;
-        height: 100%;
-        max-height: 250px;
-        border-radius: 10px;
-        overflow: auto;
-        width: 100%;
-        max-width: 950px;
-    }
 
     .mat-dialog-content {
         overflow: auto;
         height: calc(100% - 600px);
     }
 
-    .form-table-config {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
 
     .example-tree-invisible {
         display: none;
@@ -71,7 +33,7 @@
        * This padding sets alignment of the nested nodes.
        */
       .example-tree .mat-nested-tree-node div[role=group] {
-        padding-left: 40px; 
+        padding-left: 40px;
       }
       
       /*
@@ -82,5 +44,17 @@
       .example-tree div[role=group] > .mat-tree-node {
         padding-left: 40px;
       }
+
+      .categoriesPermission{
+        margin-right: 30px;
+      }
+
+      .button-form-config {
+        height: 60px;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
 }
+
 

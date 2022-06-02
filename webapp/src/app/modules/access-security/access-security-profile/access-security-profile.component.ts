@@ -5,22 +5,27 @@ import {MatTreeNestedDataSource} from '@angular/material/tree';
 import { MatDialogRef } from '@angular/material/dialog';
 
 
-
 interface PermissionsClass {
   name: string;
-  children?: PermissionsClass[];
+  children?: any;
 }
-
 
 
 const PERMISSION_DATA: PermissionsClass[] = [
   {
     name: 'Clientes',
-    children: [{name:'Cadastro'}, {name:'Contatos'}]
+    children: [
+      {name:'Cadastro', operations: {insert: true, create: false, update: false, delete: true} },
+      {name:'Contatos', operations: {insert: false, create: false, update: false, delete: true}}
+    ]
+
   },
   {
     name: 'Gestão de Pessoas',
-    children: [{name:'Cadastro'}, {name:'Educação'}, {name:'Dados Bancários'}, {name:'Financeiro'}, {name:'Skills'}, {name:'Documentos'}]
+    children: [
+      {name:'Cadastro', operations: {insert: true, create: false, update: true, delete: true} },
+      {name:'Educação', operations: {insert: true, create: true, update: true, delete: true} },
+          ]
   }
 ];
 
@@ -34,12 +39,16 @@ const PERMISSION_DATA: PermissionsClass[] = [
 export class AccessSecurityProfileComponent implements OnInit {
   profileForm!: FormGroup
 
-  data: [] = []
+  data: [] = [];
   method: string = '';
   profileId!: string;
+  dataTable: [] = [];
+  displayedColumns: string[] = ['checkbox'];
 
   permissionControl = new NestedTreeControl<PermissionsClass>(node => node.children);
   dataSource = new MatTreeNestedDataSource<PermissionsClass>();
+
+  toppings: FormGroup;
 
   constructor(
     // public dialogRef: MatDialogRef<AccessSecurityProfileComponent>,
@@ -47,6 +56,13 @@ export class AccessSecurityProfileComponent implements OnInit {
   ) {
 
     this.dataSource.data = PERMISSION_DATA;
+
+    this.toppings = fb.group({
+      access: false,
+      add: true,
+      alter: false,
+      delete: false
+    })
 
    }
 
@@ -58,10 +74,11 @@ export class AccessSecurityProfileComponent implements OnInit {
     this.initForm();
   }
 
-  initForm(): void {
+  initForm(): void { 
     this.profileForm = this.fb.group({
       profileName: ['', Validators.required],
       identifier: ['', Validators.required],
+
     });
     if (this.data) {
       this.profileForm.patchValue(this.data);
