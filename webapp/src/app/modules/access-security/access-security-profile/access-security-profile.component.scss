@@ -1,0 +1,60 @@
+#profileRegister {
+    width: 100%;
+    max-width: 1200px !important;
+
+    .content-scroll{
+        margin-top: 10px;
+        padding: 24px;
+    }
+
+    .checkbox{
+        margin-top: 20px;
+    }
+
+
+    .mat-dialog-content {
+        overflow: auto;
+        height: calc(100% - 600px);
+    }
+
+
+    .example-tree-invisible {
+        display: none;
+      }
+      
+      .example-tree ul,
+      .example-tree li {
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style-type: none;
+      }
+      
+      /*
+       * This padding sets alignment of the nested nodes.
+       */
+      .example-tree .mat-nested-tree-node div[role=group] {
+        padding-left: 40px;
+      }
+      
+      /*
+       * Padding for leaf nodes.
+       * Leaf nodes need to have padding so as to align with other non-leaf nodes
+       * under the same parent.
+       */
+      .example-tree div[role=group] > .mat-tree-node {
+        padding-left: 40px;
+      }
+
+      .categoriesPermission{
+        margin-right: 30px;
+      }
+
+      .button-form-config {
+        height: 60px;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+}
+
+

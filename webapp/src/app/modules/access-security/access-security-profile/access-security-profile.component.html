@@ -1,0 +1,76 @@
+<div id="profileRegister" class="page">
+    <div class="profileRegisterH2">
+        <h1 fxLayoutAlign="start">Cadastro de perfis</h1>
+    </div>
+    <div class="content-scroll" *ngIf="profileForm" >
+        <form [formGroup]="profileForm" fxLayout="column">
+            <div fxFlex="100" fxLayoutGap="16px" >
+                <mat-form-field fxFlex="20" appearance="outline" >
+                    <mat-label>Identificador</mat-label>
+                    <input matInput placeholder="Identificador" formControlName="identifier" />
+                </mat-form-field>
+                <mat-form-field fxFlex="70" appearance="outline" >
+                    <mat-label>Nome do Perfil</mat-label>
+                    <input matInput placeholder="Nome do Perfil" formControlName="profileName" />
+                </mat-form-field>
+                <div fxFlex="10" fxLayout="row">
+                    <button class="button-form-config" mat-button color="primary">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                    <button class="button-form-config" color="primary" mat-flat-button>
+                      <mat-icon>save</mat-icon>
+                    </button>
+                  </div>
+            </div>
+
+            <div fxLayout="row" fxFlex="100">
+                <mat-tree fxFlex="100" class="divTree" [dataSource]="dataSource" [treeControl]="permissionControl"
+                    class="example-tree">
+                    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+                        <div class="mat-tree-node">
+                            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                                <mat-icon class="mat-icon-rtl-mirror">
+                                    {{permissionControl.isExpanded(node) ? 'expand_ more' : 'chevron_right'}}
+                                </mat-icon>
+                            </button>
+                            <div  fxFlex="100" fxLayoutAlign="start center" > 
+                                <div fxFlex="50">
+                                    {{node.name}}
+                                </div>
+                                <div  fxFlex="50" fxLayoutAlign="space-between">
+                                    <h3>Acessar</h3>
+                                    <h3>Adicionar</h3>
+                                    <h3>Alterar</h3>
+                                    <h3>Deletar</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div [class.example-tree-invisible]="!permissionControl.isExpanded(node)" role="group">
+                            <ng-container matTreeNodeOutlet></ng-container>
+                        </div>
+                    </mat-nested-tree-node>
+                    <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+
+                        <div fxLayout="row" fxFlex="100" class="permissionGlobal">
+                            <div fxLayout="row" fxFlex="50" fxLayoutAlign="start center">
+                                {{node.name}}
+                            </div>
+                            <div fxFlex="50" fxLayoutAlign="space-between center">
+
+                                <mat-checkbox class="example-margin" color="primary"></mat-checkbox>
+
+                                <mat-checkbox class="example-margin" color="primary"></mat-checkbox>
+
+                                <mat-checkbox class="example-margin" color="primary"></mat-checkbox>
+
+                                <mat-checkbox class="example-margin" color="primary"></mat-checkbox>
+                            </div>
+                        </div>
+                    </mat-tree-node>
+                 
+                </mat-tree>
+            </div>
+        </form>
+
+    </div>
+</div>
