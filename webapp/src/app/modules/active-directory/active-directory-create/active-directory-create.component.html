@@ -1,0 +1,57 @@
+<div id="activeDirectory" class="page">
+    <div class="content-active" fxLayout="row" fxLayoutAlign="start start">
+      <h2 mat-dialog-title class="title">{{ "active_directory.ad_connection" | translate }}</h2>
+    </div>
+    <div class="content-form" fxLayout="column">
+      <form [formGroup]="settingForm" class="form-box">
+        <mat-form-field class="form-control" appearance="outline">
+          <mat-label>{{ "active_directory.ad_address" | translate }}</mat-label>
+          <input matInput placeholder="Endereço AD" formControlName="adAdress" />
+          <mat-error
+            *ngIf="
+              settingForm && settingForm.controls['adAdress'].hasError('required')
+            ">
+            {{ "active_directory.error_ad_address_required" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-control" appearance="outline">
+          <mat-label>Usuário</mat-label>
+          <input matInput placeholder="Usuário" formControlName="user" />
+          <mat-error
+            *ngIf="
+              settingForm && settingForm.controls['user'].hasError('required')
+            ">
+            {{ "error_user_required" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-control" appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input matInput placeholder="Senha" formControlName="password" />
+          <mat-error
+            *ngIf="
+              settingForm && settingForm.controls['password'].hasError('required')
+            ">
+            {{ "error_password_required" | translate }}
+          </mat-error>
+          <mat-error
+            *ngIf="
+              settingForm &&
+              settingForm.controls['password'].hasError('minlength')
+            ">
+            {{ "error_small_password" | translate }}</mat-error
+          >
+          <mat-error
+            *ngIf="
+              settingForm &&
+              settingForm.controls['password'].hasError('maxlength')
+            ">
+            {{ "error_long_password" | translate }}</mat-error
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="navigation-buttons" fxLayoutAlign="center end" fxLayoutGap="16px">
+      <button mat-flat-button color="primary">{{ "connect" | translate }}</button>
+    </div>
+  </div>
+  

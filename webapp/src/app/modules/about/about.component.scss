@@ -1,0 +1,58 @@
+#about {
+    div {
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 200px;
+            max-height: 300px;
+            margin: 50px
+        }
+
+        h1 {
+            width: 60vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .options {
+        width: 60vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 15px;
+        margin-left: 200px;
+
+        i{
+            margin: 10px;
+        }
+    }
+    .date  {
+        width: 60vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 15px;
+        margin-left: 100px;
+
+        i{
+            margin: 10px;
+        }
+    }
+    .version  {
+        width: 60vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 15px;
+        margin-left: 100px;
+
+        i{
+            margin: 10px;
+        }
+    }
+
+}

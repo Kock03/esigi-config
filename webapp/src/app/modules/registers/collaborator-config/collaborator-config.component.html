@@ -1,0 +1,30 @@
+<div id="collaborator-config" class="page">
+  <div class="content-scroll">
+    <div class="config-group-box">
+      <div fxLayout="row wrap" fxLayoutAlign="start">
+        <div *ngFor="let menu of menuList">
+          <button
+            class="config-box"
+            mat-stroked-button
+            fxLayout="column"
+            (click)="openModal(menu)"
+          >
+            <div class="config-name" fxLayoutAlign="start center">
+              <mat-icon class="icon">{{ menu.icon }}</mat-icon>
+              <h3>{{ menu.menuName }}</h3>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button
+  (click)="goBack()"
+  class="go-back-button"
+  color="primary"
+  mat-flat-button
+  fxLayoutAlign="start end"
+>
+  <mat-icon> chevron_left </mat-icon> {{ "back_btn" | translate }}
+</button>
