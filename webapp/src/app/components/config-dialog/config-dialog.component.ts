@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {
   MatDialog,
   MatDialogRef,
@@ -24,7 +25,7 @@ export class ConfigDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<ConfigDialogComponent>,
     public translateService: TranslateService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.title = this.data.title;
@@ -60,21 +61,21 @@ export class ConfigDialogComponent implements OnInit {
           name: 'Colaborador',
         });
         break;
-        case 'projects-changes':
+      case 'projects-changes':
         this.dataTable.push({
           name: 'Projetos',
         });
         break;
-        case 'finances-changes':
-          this.dataTable.push({
-            name: 'Finanças',
-          });
-          break;
-          case 'generic-changes':
-            this.dataTable.push({
-              name: 'Genérico',
-            });
-            break;
+      case 'finances-changes':
+        this.dataTable.push({
+          name: 'Finanças',
+        });
+        break;
+      case 'generic-changes':
+        this.dataTable.push({
+          name: 'Genérico',
+        });
+        break;
 
 
       default:
