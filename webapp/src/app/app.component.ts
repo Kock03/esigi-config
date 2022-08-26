@@ -17,32 +17,11 @@ export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  menuList = [
-    {
-      name: 'Active Directory',
-      icon: 'admin_panel_settings',
-      selected: false,
-      action: 'active_directory/novo',
-    },
-    {
-      name: 'E-mail',
-      icon: 'email',
-      selected: false,
-      action: 'email/novo',
-    },
-    {
-      name: 'Cadastros',
-      icon: 'settings_applications',
-      selected: false,
-      action: 'cadastros/opcoes',
-    },
-    {
-      name: 'About',
-      icon: 'info',
-      selected: false,
-      action: 'about/info',
-    },
-  ];
+  openTree: boolean = false;
+  active_directory: string = "active_directory";
+  email: string = "email";
+  cadastros: string = "cadastros";
+  about: string = "about";
 
   collaboratorId!: string | null;
 
@@ -64,6 +43,11 @@ export class AppComponent {
       .subscribe((res: any) => {
         this.activeMenu = res.url.split('/')[1];
       });
+  }
+
+  recize() {
+
+    this.openTree = this.openTree === true ? false : true;
   }
 
   viewEdit() {
@@ -88,6 +72,24 @@ export class AppComponent {
 
   navigate(route: string) {
     this.router.navigate([route]);
+  }
+
+  navigator(route: any) {
+    console.log("🚀 ~ file: app.component.ts ~ line 79 ~ AppComponent ~ navigator ~ route", route)
+    switch (route) {
+      case 'active_directory':
+        this.router.navigate(['active_directory/novo']);
+        break;
+      case 'email':
+        this.router.navigate(['email/novo']);
+        break;
+      case 'cadastros':
+        this.router.navigate(['cadastros/opcoes']); 
+        break;
+        case 'about':
+          this.router.navigate(['about/info']); 
+          break;
+    }
   }
 
   openApp(): void {
