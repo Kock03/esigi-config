@@ -1,10 +1,10 @@
 #activeDirectory{
+  max-width: 1700px;
     .label{
         margin-top: 50px;
     }
 
     .form-control{
-        width:60px;
         width: 100%;
     }
     .navigation-buttons {
@@ -18,8 +18,10 @@
   .content-form {
     height: calc(100vh - 216px);
     .form-box {
-      max-width: 600px;
+      max-width: 1600px;
     }
   }
+
+
 
 }
