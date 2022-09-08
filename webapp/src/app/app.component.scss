@@ -14,7 +14,7 @@ mat-sidenav {
   background-image: url(../assets/icons/textura-sidenav.png);
   padding: 4px;
   text-align: center;
-  
+  // position: static;
 }
 
 .menu-button-logout {
@@ -95,7 +95,7 @@ span{
 }
 
 .avatar {
-  margin-top: 44px;
+  margin-top: 28px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -111,7 +111,10 @@ span{
 .designation {
   margin-top: 0 !important;
   color: lightgrey;
+}
 
+.designation ng-star-inserted{
+  padding: 0 !important;
 }
 
 mat-divider {
@@ -125,6 +128,14 @@ mat-divider {
 
 .menu-button-logo {
   margin-top: 8px !important;
+}
+
+.buttom-edit{
+  margin-top: 0px !important;
+  background-color: transparent !important;
+  border-color: transparent;
+  color: lightgrey !important;
+  font-size: 16px;
 }
 
 

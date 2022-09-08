@@ -1,12 +1,14 @@
 <div id="registers-initial" class="page">
   <div class="content-scroll">
     <div class="initial-group-box">
-      <div>
+      <!-- <div>
       <img
         class="img"
         src="../assets/icons/avatar-astronauta.png"
       />
-      </div>
+      </div> -->
+
+
       <!-- <div  fxLayout="row wrap" fxLayoutAlign="start">
               <div>
                 <button
@@ -75,5 +77,34 @@
               </div>
             </div> -->
     </div>
+  </div>
+  <div class="group-box-superior"  fxLayout="row" fxLayoutAlign="space-around center"  >
+    <img
+    class="img"
+    src="../assets/icons/1.png"
+    (click)="clientConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/2.png"
+    (click)="collaboratorConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/3.png"
+    (click)="projectConfig()"
+  />
+  </div>
+  <div  class="group-box-bottom" fxLayout="row" fxLayoutAlign="space-evenly center"  >
+    <img
+    class="img"
+    src="../assets/icons/4.png"
+    (click)="financeConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/5.png"
+    (click)="genericConfig()"
+  />
   </div>
 </div>
