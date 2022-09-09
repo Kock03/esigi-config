@@ -5,13 +5,7 @@
       <mat-icon>exit_to_app</mat-icon>
       <span>{{ "app_component.logout_span" | translate }}</span>
     </button> 
-  </div>
-  <!-- <div class="logout">
-    <button mat-button class="menu-button logout" (click)="logout()">
-      <mat-icon>exit_to_app</mat-icon>
-      <span>{{ "app_component.logout_span" | translate }}</span>
-    </button> -->
-  
+  </div>  
   <div>
     <button
       mat-icon-button
@@ -40,7 +34,6 @@
     <button *ngIf="openTree != true" class="buttom-edit" (click)="viewEdit()">
       {{ "app_component.edit" | translate }}
     </button>
-    <!-- <a *ngIf="openTree != true" mat-button class="edit" (click)="viewEdit()">{{ "app_component.edit" | translate }}</a> -->
 
     <mat-divider *ngIf="openTree != true"></mat-divider>
 
@@ -197,7 +190,7 @@
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content [ngStyle]="openTree && {'margin-left': '100px'} || {'margin-left': '250px'}">
     <div class="content">
       <router-outlet></router-outlet>
     </div>
