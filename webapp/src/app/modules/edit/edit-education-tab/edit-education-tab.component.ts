@@ -82,7 +82,7 @@ export class EditEducationTabComponent implements OnInit {
 
     const dialogRef = this.dialog.open(EditLanguageDialog, {
       width: '500px',
-      height: '300px',
+      height: '320px',
     });
 
     dialogRef.afterClosed().subscribe(language => {
@@ -95,7 +95,7 @@ export class EditEducationTabComponent implements OnInit {
   openDialogEducation() {
     const dialogRef = this.dialog.open(EditEducationDialog, {
       width: '500px',
-      height: '500px'
+      height: '400px',
     });
 
     dialogRef.afterClosed().subscribe(education => {
@@ -114,7 +114,7 @@ export class EditEducationTabComponent implements OnInit {
     sessionStorage.setItem('language_id', this.languageId);
     const dialogRef = this.dialog.open(EditLanguageDialog, {
       width: '500px',
-      height: '300px',
+      height: '320px',
       data: languageSelected,
     });
 
@@ -156,7 +156,7 @@ export class EditEducationTabComponent implements OnInit {
     sessionStorage.setItem('education_id', this.educationId);
     const dialogRef = this.dialog.open(EditEducationDialog, {
       width: '500px',
-      height: '470px',
+      height: '400px',
       data: educationSelected,
     });
     dialogRef.afterClosed().subscribe(education => {

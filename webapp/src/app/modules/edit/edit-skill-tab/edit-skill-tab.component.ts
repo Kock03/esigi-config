@@ -1,5 +1,5 @@
 
-import { Component, Input, Output, EventEmitter, Inject, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Inject, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
@@ -11,7 +11,9 @@ import { EditSkillDialog } from './edit-skill-dialog-component';
 @Component({
   selector: 'app-edit-skill-tab',
   templateUrl: './edit-skill-tab.component.html',
-  styleUrls: ['./edit-skill-tab.component.scss']
+  styleUrls: ['./edit-skill-tab.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class EditSkillTabComponent {
   @Output() onChange: EventEmitter<any> = new EventEmitter();
@@ -55,7 +57,7 @@ export class EditSkillTabComponent {
     sessionStorage.setItem('method', this.method);
     const dialogRef = this.dialog.open(EditSkillDialog, {
       width: '500px',
-      height: '470px',
+      height: '540px',
     });
 
     dialogRef.afterClosed().subscribe(skill => {
@@ -76,7 +78,7 @@ export class EditSkillTabComponent {
     sessionStorage.setItem('skill_id', this.skillId);
     const dialogRef = this.dialog.open(EditSkillDialog, {
       width: '500px',
-      height: '620px',
+      height: '540px',
       data: skillSelected,
     });
     dialogRef.afterClosed().subscribe(skill => {

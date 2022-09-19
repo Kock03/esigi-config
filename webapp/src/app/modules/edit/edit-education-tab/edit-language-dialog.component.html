@@ -1,40 +1,53 @@
-<div id="collaboratorLanguageDialog">
+<div id="collaboratorLanguageDialog" class="dialog">
     <div class="content-scroll" *ngIf="languageForm">
-        <h2 mat-dialog-title class="title-dialog">{{'edit_profile.education.languages.name' | translate}}</h2>
-        <mat-dialog-content class="mat-typography">
-            <form [formGroup]="languageForm" fxLayout="column">
-                <mat-form-field appearance="outline">
-                    <mat-label>{{'edit_profile.education.languages.name' | translate}}</mat-label>
-                    <input matInput disableRipple formControlName="languageName" placeholder="Idioma" />
-                </mat-form-field>
+        <div class="content-header" fxLayout="row">
+            <h2 class="title-content" mat-dialog-title>{{'edit_profile.education.languages.name' | translate}}</h2>
+            <button mat-icon-button class="mat-icon-header" (click)="close()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </div>
+        <div class="dialog-content">
+            <mat-dialog-content class="mat-typography">
+                <form [formGroup]="languageForm" fxLayout="column">
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{'edit_profile.education.languages.name' | translate}}</mat-label>
+                        <input matInput disableRipple formControlName="languageName" placeholder="Idioma" />
 
-                <mat-form-field appearance="outline">
-                    <mat-label>{{'edit_profile.education.languages.fluency.name' | translate}}</mat-label>
-                    <mat-select formControlName="degreeOfInfluence">
-                        <mat-option [value]="1">{{'edit_profile.education.languages.fluency.all_options' | translate}}
-                        </mat-option>
-                        <mat-option [value]="2">{{'edit_profile.education.languages.fluency.writing' | translate}}
-                        </mat-option>
-                        <mat-option [value]="3">{{'edit_profile.education.languages.fluency.reading' | translate}}
-                        </mat-option>
-                        <mat-option [value]="4">{{'edit_profile.education.languages.fluency.conversation' | translate}}
-                        </mat-option>
-                        <mat-option [value]="5">{{'edit_profile.education.languages.fluency.writing_and_reading' |
-                            translate}}</mat-option>
-                        <mat-option [value]="6">{{'edit_profile.education.languages.fluency.writing_and_conversation' |
-                            translate}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </form>
-        </mat-dialog-content>
-        <mat-dialog-actions>
-            <div class="button-dialog" fxLayout="center">
-                <button mat-flat-button mat-dialog-close>{{'cancel_btn' | translate}}</button>
-                <button mat-flat-button [mat-dialog-close]="true" color="primary" (click)="save()"
-                    [disabled]="languageForm.invalid">
-                    {{'salve_btn' | translate}}
-                </button>
-            </div>
-        </mat-dialog-actions>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{'edit_profile.education.languages.fluency.name' | translate}}</mat-label>
+                        <mat-select formControlName="degreeOfInfluence">
+                            <mat-option [value]="1">{{'edit_profile.education.languages.fluency.all_options' |
+                                translate}}
+                            </mat-option>
+                            <mat-option [value]="2">{{'edit_profile.education.languages.fluency.writing' | translate}}
+                            </mat-option>
+                            <mat-option [value]="3">{{'edit_profile.education.languages.fluency.reading' | translate}}
+                            </mat-option>
+                            <mat-option [value]="4">{{'edit_profile.education.languages.fluency.conversation' |
+                                translate}}
+                            </mat-option>
+                            <mat-option [value]="5">{{'edit_profile.education.languages.fluency.writing_and_reading' |
+                                translate}}</mat-option>
+                            <mat-option [value]="6">
+                                {{'edit_profile.education.languages.fluency.writing_and_conversation' |
+                                translate}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </form>
+            </mat-dialog-content>
+
+            <mat-dialog-actions>
+                <div class="button-dialog">
+                    <button mat-flat-button mat-dialog-close>{{'cancel_btn' | translate}}</button>
+                    <button mat-flat-button [mat-dialog-close]="true" color="primary" (click)="save()"
+                        [disabled]="languageForm.invalid">
+                        {{'salve_btn' | translate}}
+                    </button>
+                </div>
+            </mat-dialog-actions>
+        </div>
     </div>
 </div>
