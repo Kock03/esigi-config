@@ -1,73 +1,33 @@
-<div id="registers-initial" class="page">
-    <div class="content-scroll">
-        <div class="initial-group-box">
-            <div  fxLayout="row wrap" fxLayoutAlign="start">
-              <div>
-                <button
-                  class="initial-box"
-                  mat-stroked-button
-                  fxLayout="column"
-                  (click)="clientConfig()"
-                >
-                  <div class="initial-name" fxLayoutAlign="start center">
-                    <mat-icon class="icon">person</mat-icon>
-                    <h3>{{ "register_initial.client_register" | translate }}</h3>
-                  </div>
-                </button>
-              </div>
-              <div>
-                <button
-                  class="initial-box"
-                  mat-stroked-button
-                  fxLayout="column"
-                  (click)="collaboratorConfig()"
-                >
-                  <div class="initial-name" fxLayoutAlign="start center">
-                    <mat-icon class="icon">group</mat-icon>
-                    <h3>{{ "register_initial.collaborator_register" | translate }}</h3>
-                  </div>
-                </button>
-              </div>
-              <div>
-                <button
-                  class="initial-box"
-                  mat-stroked-button
-                  fxLayout="column"
-                  (click)="projectConfig()"
-                >
-                  <div class="initial-name" fxLayoutAlign="start center">
-                    <mat-icon class="icon">work</mat-icon>
-                    <h3>{{ "register_initial.project_register" | translate }}</h3>
-                  </div>
-                </button>
-              </div>
-              <div>
-                <button
-                  class="initial-box"
-                  mat-stroked-button
-                  fxLayout="column"
-                  (click)="financeConfig()"
-                >
-                  <div class="initial-name" fxLayoutAlign="start center">
-                    <mat-icon class="icon">work</mat-icon>
-                    <h3>{{ "register_initial.financial_register" | translate }}</h3>
-                  </div>
-                </button>
-              </div>
-              <div>
-                <button
-                  class="initial-box"
-                  mat-stroked-button
-                  fxLayout="column"
-                  (click)="genericConfig()"
-                >
-                  <div class="initial-name" fxLayoutAlign="start center">
-                    <mat-icon class="icon">add</mat-icon>
-                    <h3>{{ "register_initial.generic_register" | translate }}</h3>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-    </div>
+<div id="registers-initial">
+  <mat-tab-group headerPosition="below" class="tab-content" animationDuration="0ms">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>fiber_manual_record</mat-icon>
+      </ng-template>
+      <div fxLayout="row" fxLayoutAlign="center start">
+        <div class="div">
+          <img class="client img" src="../assets/icons/register.png" (click)="clientConfig()" />
+        </div>
+        <div class="div">
+          <img class="collaborator img" src="../assets/icons/register.png" (click)="collaboratorConfig()" />
+        </div>
+        <div class="div">
+          <img class="project img" src="../assets/icons/register.png" (click)="projectConfig()" />
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>fiber_manual_record</mat-icon>
+      </ng-template>
+      <div fxLayout="row" fxLayoutAlign="center start">
+        <div class="div">
+          <img class="finance img" src="../assets/icons/register.png" (click)="financeConfig()" />
+        </div>
+        <div class="div">
+          <img class="generic img" src="../assets/icons/register.png" (click)="genericConfig()" />
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
