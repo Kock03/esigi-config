@@ -6,6 +6,7 @@ export const environment = {
   production: false,
 
   CONFIG_MS: 'localhost:3503/api/v1/',
+  portal: 'http://localhost:3406/login',
   message: 'LOCAL',
   protocol: 'http',
 };
