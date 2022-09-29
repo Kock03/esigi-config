@@ -1,33 +1,35 @@
-<div id="registers-initial">
-  <mat-tab-group headerPosition="below" class="tab-content" animationDuration="0ms">
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon>fiber_manual_record</mat-icon>
-      </ng-template>
-      <div fxLayout="row" fxLayoutAlign="center start">
-        <div class="div">
-          <img class="client img" src="../assets/icons/register.png" (click)="clientConfig()" />
-        </div>
-        <div class="div">
-          <img class="collaborator img" src="../assets/icons/register.png" (click)="collaboratorConfig()" />
-        </div>
-        <div class="div">
-          <img class="project img" src="../assets/icons/register.png" (click)="projectConfig()" />
-        </div>
-      </div>
-    </mat-tab>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon>fiber_manual_record</mat-icon>
-      </ng-template>
-      <div fxLayout="row" fxLayoutAlign="center start">
-        <div class="div">
-          <img class="finance img" src="../assets/icons/register.png" (click)="financeConfig()" />
-        </div>
-        <div class="div">
-          <img class="generic img" src="../assets/icons/register.png" (click)="genericConfig()" />
-        </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+<div id="registers-initial" class="page">
+  <div class="content-scroll">
+    <div class="initial-group-box">
+    </div>
+  </div>
+  <div class="group-box-superior"  fxLayout="row" fxLayoutAlign="space-around center"  >
+    <img
+    class="img"
+    src="../assets/icons/8.png"
+    (click)="clientConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/9.png"
+    (click)="collaboratorConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/10.png"
+    (click)="projectConfig()"
+  />
+  </div>
+  <div  class="group-box-bottom" fxLayout="row" fxLayoutAlign="space-evenly center"  >
+    <img
+    class="img"
+    src="../assets/icons/11.png"
+    (click)="financeConfig()"
+  />
+  <img
+    class="img"
+    src="../assets/icons/12.png"
+    (click)="genericConfig()"
+  />
+  </div>
 </div>

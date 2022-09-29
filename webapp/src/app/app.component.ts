@@ -79,6 +79,8 @@ export class AppComponent {
     }, 50);
   }
 
+
+
   navigate(route: string) {
     this.router.navigate([route]);
   }

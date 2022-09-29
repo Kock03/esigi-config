@@ -2,13 +2,18 @@
   <div mat-dialog-content></div>
   <div class="button-config-dialog-control">
     <mat-panel-title class="config-box" fxLayout="row">
-      <mat-icon class="icon-config-dialog">account_circle</mat-icon>
-      <button disabled class="button-config" mat-button>
-        <h2 fxLayoutAlign="start">{{title}}</h2>
+      <img
+      src="../assets/icons/avatar-astronauta.png"
+    />
+      <!-- <mat-icon class="icon-config-dialog">account_circle</mat-icon> -->
+      <button disabled class="button-config-dialog" mat-button>
+        <h2 class="title-config" fxLayoutAlign="start">{{title}}</h2>
       </button>
-      <button (click)="close()" class="cancel-icon-config" mat-button>
+      <div class="button-config">
+      <button (click)="close()" class="cancel-icon-config" mat-icon-button>
         <mat-icon>cancel</mat-icon>
       </button>
+    </div>
     </mat-panel-title>
   </div>
   <div class="form-table-config">
@@ -18,8 +23,8 @@
     class="mat-typography"
   >
     <form class="form-config" [formGroup]="configForm" fxLayout="column">
-      <div fxFlex="100" fxLayoutGap="16px">
-        <mat-form-field fxFlex="74" appearance="outline">
+      <div fxFlex="100" fxLayoutGap="16px" fxLayout="row">
+        <mat-form-field fxFlex="70" appearance="outline">
           <mat-label>{{ "name" | translate }}</mat-label>
           <input
             matInput
@@ -29,11 +34,11 @@
           />
         </mat-form-field>
 
-        <div fxFlex="26" fxLayout="row">
-          <button class="button-form-config" mat-button color="primary">
+        <div fxFlex="30"  fxLayoutGap="5px">
+          <button mat-raised-button  class="button-form-config">
             <mat-icon>close</mat-icon>
           </button>
-          <button class="button-form-config" color="primary" mat-flat-button>
+          <button class="button-form-config" mat-raised-button >
             <mat-icon>save</mat-icon>
           </button>
         </div>
