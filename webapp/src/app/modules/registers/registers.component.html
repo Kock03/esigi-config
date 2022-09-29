@@ -1,0 +1,18 @@
+<div id="registers-initial">
+  <mat-tab-group headerPosition="below" class="tab-content" animationDuration="0ms">
+    <ng-template mat-tab-label>
+      <mat-icon>fiber_manual_record</mat-icon>
+    </ng-template> -->
+    <mat-tab *ngFor="let tab of tabMenuList">
+      <ng-template mat-tab-label>
+        <mat-icon>fiber_manual_record</mat-icon>
+      </ng-template>
+      <div fxLayout="row" fxLayoutAlign="center start">
+        <div class="div" *ngFor="let menu of tab.menu">
+          <label>{{ menu.content }}</label>
+          <img class="client img" src="../assets/icons/register.png" (click)="registerDetails(menu.context)" />
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,22 @@
+<div id="modal">
+    <mat-tab-group headerPosition="below" class="tab-content" animationDuration="700ms">
+        <ng-template mat-tab-label>
+            <mat-icon>fiber_manual_record</mat-icon>
+        </ng-template>
+        <mat-tab *ngFor="let tab of menuTabList">
+            <ng-template mat-tab-label>
+                <mat-icon>fiber_manual_record</mat-icon>
+            </ng-template>
+            <div fxLayout="row" fxLayoutAlign="center start">
+                <div class="div" *ngFor="let menu of tab.menu">
+                    <label>{{menu.menuName}}</label>
+                    <img class="client img" src="../assets/icons/register.png" (click)="openModal(menu)" />
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <button (click)="goBack()" class="go-back-button" color="primary" mat-flat-button>
+        <mat-icon> chevron_left </mat-icon> {{ "back_btn" | translate }}
+    </button>
+
+</div>
