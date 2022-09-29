@@ -33,5 +33,9 @@ export class ActiveDirectoryCreateComponent implements OnInit {
     });
   }
 
+  goHome(port: number): void {
+    location.replace(`http://localhost:${port}/portal`);
+  }
+
 }
 

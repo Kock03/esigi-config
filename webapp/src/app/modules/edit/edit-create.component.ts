@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DocumentValidator } from 'src/app/validators/document.validator';
 
 @Component({
@@ -17,7 +18,7 @@ export class EditCreateComponent implements OnInit {
 
   ];
 
-  constructor(private fb: FormBuilder,) { }
+  constructor(private fb: FormBuilder, private router: Router,) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -56,6 +57,10 @@ export class EditCreateComponent implements OnInit {
     } else {
       //this.snackbarService.showAlert('Verifique os campos');
     }
+  }
+
+  goBack(){
+    this.router.navigate(['active_directory/novo'])
   }
 
 }

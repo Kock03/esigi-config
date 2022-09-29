@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
 
-    redirectTo: 'email/novo',
+    redirectTo: 'active_directory/novo',
 
     pathMatch: 'full',
   },

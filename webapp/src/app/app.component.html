@@ -37,13 +37,16 @@
     />
     <h2 *ngIf="openTree != true" class="name">Usuário</h2>
     <p *ngIf="openTree != true" class="designation">Função</p>
+    <button *ngIf="openTree != true" class="buttom-edit" (click)="viewEdit()">
+      {{ "app_component.edit" | translate }}
+    </button>
 
     <mat-divider *ngIf="openTree != true"></mat-divider>
 
     <div
       class="design"
       [ngStyle]="
-        (openTree && { 'margin-top': '190px' }) || { 'margin-top': '30px' }
+        (openTree && { 'margin-top': '190px' }) || { 'margin-top': '15px' }
       "
     >
       <div
@@ -166,10 +169,29 @@
         </button>
       </div>
 
-      <div  [ngStyle]="openTree && {'margin-left': '1px'} || {'margin-left': '20px'}">
-        <button mat-icon-button  class="menu-button-more" (click)=recize() 
-        [ngStyle]="openTree && {'margin-left': '5px', 'margin-top': '230px'}   || {'margin-right': '25px', 'margin-top': '110px'}">
-          <mat-icon >more_horiz</mat-icon>
+      <div
+        class="btn-menu"
+        [ngStyle]="
+          (openTree && { 'margin-left': '1px' }) || { 'margin-left': '20px' }
+        "
+      >
+        <button
+          mat-flat-button
+          class="menu-button-more"
+          (click)="recize()"
+          [ngStyle]="
+            (openTree && { 'margin-left': '5px' }) || { 'margin-right': '25px' }
+          "
+        >
+          <mat-icon
+            class="btn-more"
+            [ngStyle]="
+              (openTree && { 'margin-top': '225px' }) || {
+                'margin-top': '105px'
+              }
+            "
+            >more_horiz</mat-icon
+          >
         </button>
         </div>
     </div>

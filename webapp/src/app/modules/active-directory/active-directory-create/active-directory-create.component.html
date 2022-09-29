@@ -1,6 +1,16 @@
 <div id="activeDirectory" class="page">
     <div class="content-active" fxLayout="row" fxLayoutAlign="start start">
+      <div fxLayout="row" >
+      <button
+      mat-icon-button
+      class="btn-back"
+      (click)="goHome(3406)"
+      color="primary"
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
       <h2 mat-dialog-title class="title">{{ "active_directory.ad_connection" | translate }}</h2>
+    </div>
     </div>
     <div class="content-form" fxLayout="column">
       <form [formGroup]="settingForm" class="form-box">

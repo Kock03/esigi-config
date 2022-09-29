@@ -65,6 +65,7 @@ html {
   max-width: 1280px;
   margin: auto;
   height: calc(100% - 64px);
+ 
 }
 
 // @media (min-width: 1201px) {
@@ -100,28 +101,35 @@ html {
 
 
 .tab {
+  max-width: 1650px;
   margin-top: 24px;
+
 
   &-group {
     width: 100%;
-    max-width: 220px;
+    max-width: 1000px;
+    
+    
   }
 
   &-item {
     cursor: default;
     margin-bottom: 8px !important;
-    color: black;
+    color: #2F3133;
+    
   }
 
   &-border {
-    border-bottom: 4px solid #b8bdbf;
+    border-bottom: 10px solid #b8bdbf;
     border-radius: 4px;
+    
   }
 
 
   .done {
     .tab-border {
       border-color: #ff6a39 !important;
+     
     }
   }
 
@@ -241,6 +249,24 @@ html {
   background: #D0E7EF !important;
 }
 
+h2{
+  color: #36383a;
+}
+
+.menu-button-logo {
+  margin-top: 8px !important;
+}
+
+th{
+  font-size: 16px !important;
+}
+
+
+.btn-back{
+  margin-top: 15px !important;
+}
+
+
 html,
 body {
   height: 100%;
@@ -250,3 +276,10 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-flat-button{
+  background-color: transparent !important;
+}
+
+
+
