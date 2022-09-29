@@ -1,13 +1,96 @@
-form {
-    width: 100%;
+#collaboratorEducationTab {
+    padding-bottom: 10px;
+    max-width: 1650px;
+
+    table {
+        width: 100%;
+    }
+
+    .form-tab {
+        margin-top: 20px;
+    }
+
+    .envolti-table {
+        margin-top: 20px;
+        overflow: auto;
+        max-height: calc(100% - 200px);
+        width: 100%;
+        border-radius: 10px;
+
+        .mat-column-icon {
+            width: 50px;
+        }
+
+        .button-tab {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .mat-tab-label-active {
+        border-bottom: 2px solid #673ab7;
+        opacity: 1 !important;
+    }
+
+    .mat-ink-bar {
+        height: 0px !important;
+    }
+
+    .lenguange-form {
+        margin-top: 20px;
+    }
 }
 
 #collaboratorEducationDialog {
-    .button-dialog {
-        margin-left: 140px;
+    .dialog-content {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
     }
 
-    .title-dialog {
-        text-align: center;
+    h2 {
+        color: white !important;
+        padding-top: 20px !important;
+        padding-left: 35px;
+    }
+
+    .content-header {
+        background-color: #208fd8;
+        height: 100% !important;
+        height: 70px !important;
+    }
+
+    .mat-icon-content {
+        color: white !important;
+        margin-left: 280px !important;
+        margin-top: 15px;
+    }
+}
+
+#collaboratorLanguageDialog {
+    .dialog-content {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    h2 {
+        color: white !important;
+        padding-top: 20px !important;
+        padding-left: 35px;
+    }
+
+    .content-header {
+        background-color: #208fd8;
+        height: 100% !important;
+        height: 70px !important;
+    }
+
+    .mat-icon-header {
+        color: white !important;
+        margin-left: 330px !important;
+        margin-top: 15px;
     }
 }

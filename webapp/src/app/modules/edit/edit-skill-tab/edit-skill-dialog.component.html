@@ -1,47 +1,78 @@
 <div id="collaboratorSkillDialog" class="dialog">
     <div class="content-scroll" *ngIf="skillForm">
-        <h2 class="title-dialog" mat-dialog-title>Cadastro Skills</h2>
-        <mat-dialog-content class="mat-typography">
-            <form [formGroup]="skillForm" fxLayout="column">
-                <mat-form-field appearance="outline">
-                    <mat-label>{{'edit_profile.skills.technology'|translate}}</mat-label>
-                    <input matInput disableRipple formControlName="technology" placeholder="Tecnologia" />
-                </mat-form-field>
+        <div class="content-header" fxLayout="row">
+            <h2 class="title-content" mat-dialog-title>Tecnologia</h2>
+            <button mat-icon-button class="mat-icon-content" (click)="close()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </div>
+        <div class="dialog-content">
+            <mat-dialog-content class="mat-typography">
+                <form [formGroup]="skillForm" fxLayout="column">
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{'edit_profile.skills.technology'|translate}}</mat-label>
+                        <input matInput disableRipple formControlName="technology" placeholder="Tecnologia" />
+                        <mat-error *ngIf="skillForm &&
+            skillForm.controls['technology'].hasError('required')">
+                            {{'validators.validator-required' | translate}} </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{'edit_profile.skills.seniority.name'|translate}}</mat-label>
+                        <mat-select formControlName="seniority">
+                            <mat-option [value]="1">{{'edit_profile.skills.seniority.senior'|translate}}</mat-option>
+                            <mat-option [value]="2">{{'edit_profile.skills.seniority.full'|translate}}</mat-option>
+                            <mat-option [value]="3">{{'edit_profile.skills.seniority.junior'|translate}}</mat-option>
+                            <mat-option [value]="4">{{'edit_profile.skills.seniority.apprentice'|translate}}
+                            </mat-option>
+                            <mat-option [value]="5">{{'edit_profile.skills.seniority.specialist'|translate}}
+                            </mat-option>
+                            <mat-option [value]="6">{{'edit_profile.skills.seniority.architect'|translate}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
-                <mat-form-field appearance="outline">
-                    <mat-label>{{'edit_profile.seniority.name'|translate}}}</mat-label>
-                    <mat-select formControlName="seniority">
-                        <mat-option [value]="1">{{'edit_profile.seniority.senior'|translate}}</mat-option>
-                        <mat-option [value]="2">{{'edit_profile.seniority.full'|translate}}</mat-option>
-                        <mat-option [value]="3">{{'edit_profile.seniority.junior'|translate}}</mat-option>
-                        <mat-option [value]="4">{{'edit_profile.seniority.apprentice'|translate}}</mat-option>
-                        <mat-option [value]="5">{{'edit_profile.seniority.specialist'|translate}}</mat-option>
-                        <mat-option [value]="6">{{'edit_profile.seniority.architect'|translate}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label> {{'edit_profile.skills.time_experience'|translate}}</mat-label>
+                        <input matInput disableRipple formControlName="yearsExperience" mask="0||00"
+                            placeholder="Tempo de Experiência" />
+                        <mat-error *ngIf="skillForm &&
+          skillForm.controls['yearsExperience'].hasError('required')">
+                            {{'validators.validator-required' | translate}} </mat-error>
+                    </mat-form-field>
 
-                <mat-form-field appearance="outline">
-                    <mat-label> {{'edit_profile.skills.time_experience'|translate}}</mat-label>
-                    <input matInput disableRipple formControlName="yearsExperience" type="number"
-                        placeholder="Tempo de Experiência" />
-                </mat-form-field>
+                    <mat-form-field fxFlex="20" appearance="outline">
+                        <mat-label>Período</mat-label>
+                        <mat-select matInput disableRipple formControlName="typeOfPeriod">
+                            <mat-option [value]="1">Mês
+                            </mat-option>
+                            <mat-option [value]="2">Ano
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
-                <mat-checkbox class="checkbox" color="primary" fxFlex="50" formControlName="currentPosition">
-                    {{'edit_profile.skills.current_position'|translate}}
-                </mat-checkbox>
-                <br />
-            </form>
-        </mat-dialog-content>
-        <mat-dialog-actions>
-            <div class="button-dialog">
-                <button mat-flat-button mat-dialog-close (click)="onNoClick()">
-                    {{'cancel_btn' | translate}}
-                </button>
-                <button color="primary" [disabled]="skillForm.invalid" mat-flat-button [mat-dialog-close]="true"
-                    (click)="save()">
-                    {{'salve_btn' | translate}}
-                </button>
-            </div>
-        </mat-dialog-actions>
+
+
+                    <div class="checkbox">
+                        <mat-checkbox color="primary" class="custom-frame" formControlName="currentPosition"
+                            fxLayoutAlign="start center">{{'edit_profile.skills.current_position'|translate}}
+                        </mat-checkbox>
+                    </div>
+
+
+                    <br />
+                </form>
+            </mat-dialog-content>
+
+            <mat-dialog-actions>
+                <div class="button-dialog">
+                    <button mat-flat-button mat-dialog-close (click)="onNoClick()">
+                        {{'cancel_btn' | translate}}
+                    </button>
+                    <button color="primary" [disabled]="skillForm.invalid" mat-flat-button [mat-dialog-close]="true"
+                        (click)="save()">
+                        {{'salve_btn' | translate}}
+                    </button>
+                </div>
+            </mat-dialog-actions>
+        </div>
     </div>
 </div>

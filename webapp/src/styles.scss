@@ -199,6 +199,11 @@ html {
   }
 }
 
+.mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 10px !important;
+}
+
 
 .go-back-button {
   margin-top: 10px !important;
@@ -214,31 +219,33 @@ html {
   text-align: center;
 }
 
-.checkbox{
+.checkbox {
   margin-top: 18px;
 }
 
-.form-checkbox{
+.form-checkbox {
   margin-top: 3px;
 }
 
 .custom-frame {
-  & .mat-checkbox-background, .mat-checkbox-frame {
+
+  & .mat-checkbox-background,
+  .mat-checkbox-frame {
     border-radius: 70% !important;
     // width: 20px;
     // height: 20px;
   }
 }
 
-.mat-option:hover{
+.mat-option:hover {
   background: #D0E7EF !important;
 }
 
-.mat-selected{
+.mat-selected {
   background: #D0E7EF !important;
 }
 
-.mat-row:hover{
+.mat-row:hover {
   background: #D0E7EF !important;
 }
 

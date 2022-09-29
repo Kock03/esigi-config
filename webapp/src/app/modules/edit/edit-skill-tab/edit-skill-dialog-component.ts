@@ -1,10 +1,12 @@
-import { Input, Output, EventEmitter, Inject, Component } from "@angular/core";
+import { Input, Output, EventEmitter, Inject, Component, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
     selector: 'app-edit-skill-dialog',
     templateUrl: './edit-skill-dialog.component.html',
+    encapsulation: ViewEncapsulation.None,
+
 })
 export class EditSkillDialog {
     @Input('form') collaboratorForm!: FormGroup;
@@ -53,5 +55,10 @@ export class EditSkillDialog {
         // } catch (error: any) {
         //   console.log('ERROR 132' + error);
         // }
+    }
+
+    close() {
+        this.dialogRef.close();
+        sessionStorage.clear;
     }
 }

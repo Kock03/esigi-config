@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #registers-initial{
     // .initial-group-box {
     //     margin: auto;
@@ -79,4 +80,94 @@
       max-height: 250px;
     }
 
+=======
+#registers-initial {
+  .initial-group-box {
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+  }
+
+  .tab-content {
+    height: 100%;
+    width: 100%;
+    max-height: 800px;
+    align-items: center;
+    // margin-top: 450px;
+  }
+
+  mat-tab mat-icon {
+    height: 100%;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    max-height: 550px;
+    cursor: pointer;
+  }
+
+  .div {
+    padding-top: 100px;
+    margin-bottom: 400px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .initial-box {
+    margin: 6px;
+    width: 256px;
+    min-width: 256px;
+    height: 150px;
+    color: #F2F3F4;
+    border-color: transparent !important;
+    padding: 8px 12px 8px 12px;
+    background: #753BBD;
+  }
+
+  .initial-box:hover {
+    background: #A6D6E5 !important;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+  }
+
+  .initial-box:not(:hover)::before {
+    position: absolute;
+    top: 55px;
+    display: block;
+    height: 23px;
+    content: " ";
+    border-left: 3px solid #009CDE;
+    margin-left: -0.8rem;
+    transition: 0.3s;
+  }
+
+  .initial-box:hover::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 150px;
+    content: " ";
+    border-left: 3px solid #009CDE;
+    transition: 0.3s;
+    margin-left: -0.8rem;
+  }
+
+  .initial-name {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 14px;
+    padding: 10px;
+    color: #F2F3F4;
+    display: block ruby !important;
+  }
+
+  .icon {
+    margin-left: -10px;
+  }
+>>>>>>> eee7830f5e7546e8e933dc23077498dadfa51642
 }

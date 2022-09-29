@@ -5,6 +5,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from 'src/services/user.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent {
   sidenav!: MatSidenav;
 
   openTree: boolean = false;
+  token!: string;
   active_directory: string = "active_directory";
   email: string = "email";
   cadastros: string = "cadastros";
@@ -41,6 +43,13 @@ export class AppComponent {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: any) => {
+        let valid = res.url.indexOf('validate');
+        if (valid === -1) {
+        this.token = localStorage.getItem('token')!;
+          if (!this.token) {
+            location.replace(environment.portal);
+          }
+        }
         this.activeMenu = res.url.split('/')[1];
       });
   }
@@ -94,8 +103,8 @@ export class AppComponent {
     }
   }
 
-  openApp(port: number): void {
-    location.replace(`http://localhost:${port}`);
+  openApp(): void {
+    location.replace(`http://localhost:3406/validate/${this.token}`);
   }
 
   logout(): void {

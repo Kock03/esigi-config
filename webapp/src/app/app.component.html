@@ -1,12 +1,18 @@
 <mat-toolbar fxLayoutAlign="space-between center">
-  <div fxLayout="row" >
-    <img class="menu-button-logo" src="../assets/logo/logo-envolti-branca-roxo.png" alt="" />
+  <img src="../assets/logo/logo-envolti-branca-roxo.png" alt="" />
+  <button
+    *ngIf="sidenav.mode !== 'over'"
+    mat-button
+    class="menu-button-logout"
+    (click)="logout()"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+    <span>{{ "Logout" }}</span>
+  </button>
+  <div *ngIf="sidenav.mode === 'over'">
     <button mat-button class="menu-button-logout" (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
-      <span>{{ "app_component.logout_span" | translate }}</span>
-    </button> 
-  </div>  
-  <div>
+    </button>
     <button
       mat-icon-button
       *ngIf="sidenav.mode === 'over'"
@@ -163,6 +169,7 @@
         </button>
       </div>
 
+<<<<<<< HEAD
       <div
         class="btn-menu"
         [ngStyle]="
@@ -186,8 +193,14 @@
             "
             >more_horiz</mat-icon
           >
+=======
+      <div  [ngStyle]="openTree && {'margin-left': '1px'} || {'margin-left': '20px'}">
+        <button mat-icon-button  class="menu-button-more" (click)=recize() 
+        [ngStyle]="openTree && {'margin-left': '5px', 'margin-top': '230px'}   || {'margin-right': '25px', 'margin-top': '110px'}">
+          <mat-icon >more_horiz</mat-icon>
+>>>>>>> eee7830f5e7546e8e933dc23077498dadfa51642
         </button>
-      </div>
+        </div>
     </div>
   </mat-sidenav>
   <mat-sidenav-content [ngStyle]="openTree && {'margin-left': '100px'} || {'margin-left': '250px'}">

@@ -16,7 +16,7 @@ import { ProjectsConfigComponent } from './projects-config/projects-config.compo
 import { FinancesConfigComponent } from './finances-config/finances-config.component';
 import { GenericConfigComponent } from './generic-config/generic-config.component';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [
   {
@@ -68,6 +68,8 @@ const routes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatTabsModule,
+
   ]
 })
 export class RegistersModule { }

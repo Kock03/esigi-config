@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Inject, Input, Output, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 
@@ -6,6 +6,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
   selector: 'app-edit-language-dialog',
   templateUrl: './edit-language-dialog.component.html',
   styleUrls: ['./edit-education-tab.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class EditLanguageDialog {
   @Input('form') collaboratorForm!: FormGroup;
@@ -66,5 +68,9 @@ export class EditLanguageDialog {
     //     console.log('ERROR 132' + error);
     //   }
     // }
+  }
+  close() {
+    this.dialogRef.close();
+    sessionStorage.clear;
   }
 }

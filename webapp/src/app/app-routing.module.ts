@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidateTokenComponent } from './components/validate-token/validate-token.component';
 import { EditCreateComponent } from './modules/edit/edit-create.component';
 
 const routes: Routes = [
@@ -9,6 +10,10 @@ const routes: Routes = [
     redirectTo: 'active_directory/novo',
 
     pathMatch: 'full',
+  },
+  {
+    path: 'validate/:id',
+    component: ValidateTokenComponent,
   },
   {
     path: 'email',

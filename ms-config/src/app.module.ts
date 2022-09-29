@@ -20,10 +20,14 @@ import { FinancialInstitutionModule } from './app/financial-institution/financia
 import { TypesOfExpensesModule } from './app/types-of-expenses/types-of-expenses.module';
 import { ProvidersModule } from './app/providers/providers.module';
 import { DDIModule } from './app/ddi/ddi.module';
+import { APP_GUARD } from '@nestjs/core';
+import { AuthGuard } from './guards/auth.guard';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
+    HttpModule,
     TypeOrmModule.forRoot({
       type: process.env.TYPEORM_CONNECTION,
       host: process.env.TYPEORM_HOST,
@@ -35,11 +39,32 @@ import { DDIModule } from './app/ddi/ddi.module';
       synchronize: true,
       namingStrategy: new SnakeNamingStrategy(),
     } as TypeOrmModuleOptions),
-    PaperModule, ProjectStatusModule, CollaboratorPositionModule, GenderModule, ContractTypesModule,
-    TechnologiesModule, MaritalStatusModule, SeniorityModule, SeniorityModule, RelationshipTypeModule,
-    DocumentTypeModule, EducationLevelModule, SalaryChangeReasonModule, InstructionStatusModule, LanguagesModule, 
-    FinancialInstitutionModule, TypesOfExpensesModule, ProvidersModule, DDIModule,],
+    PaperModule,
+    ProjectStatusModule,
+    CollaboratorPositionModule,
+    GenderModule,
+    ContractTypesModule,
+    TechnologiesModule,
+    MaritalStatusModule,
+    SeniorityModule,
+    SeniorityModule,
+    RelationshipTypeModule,
+    DocumentTypeModule,
+    EducationLevelModule,
+    SalaryChangeReasonModule,
+    InstructionStatusModule,
+    LanguagesModule,
+    FinancialInstitutionModule,
+    TypesOfExpensesModule,
+    ProvidersModule,
+    DDIModule,
+  ],
   controllers: [],
-  providers: [],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: AuthGuard,
+    },
+  ],
 })
-export class AppModule { }
+export class AppModule {}
