@@ -16,7 +16,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackBarService } from 'src/services/snackbar.service';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
-import { ConfigDialogComponent } from './components/config-dialog/config-dialog.component';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
@@ -31,7 +30,7 @@ import { AboutComponent } from './modules/about/about.component';
 
 
 @NgModule({
-  declarations: [AppComponent, SnackBarComponent, ConfigDialogComponent, AboutComponent],
+  declarations: [AppComponent, SnackBarComponent, AboutComponent],
   imports: [
     NgxMaskModule.forRoot(),
     BrowserModule,
@@ -60,7 +59,7 @@ import { AboutComponent } from './modules/about/about.component';
     ReactiveFormsModule,
     MatInputModule,
     MatTableModule,
-    
+
 
   ],
   providers: [SnackBarService, ConfigDialogService,],

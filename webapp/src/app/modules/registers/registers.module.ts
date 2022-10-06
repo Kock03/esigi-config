@@ -1,59 +1,43 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegistersInitialComponent } from './registers-initial/registers-initial.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { ClientConfigComponent } from './client-config/client-config.component';
-import { CollaboratorConfigComponent } from './collaborator-config/collaborator-config.component';
-import { ProjectsConfigComponent } from './projects-config/projects-config.component';
-import { FinancesConfigComponent } from './finances-config/finances-config.component';
-import { GenericConfigComponent } from './generic-config/generic-config.component';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { ConfigDialogComponent } from './modal/config-dialog.component';
+import { RegisterMenuComponent } from './menu/register-menu.component';
+import { RegisterComponent } from './registers.component';
 
 const routes: Routes = [
   {
     path: 'opcoes',
-    component: RegistersInitialComponent,
+    component: RegisterComponent,
   },
   {
-    path: 'clientes',
-    component: ClientConfigComponent,
+    path: ':context',
+    component: RegisterMenuComponent,
   },
-  {
-    path: 'colaboradores',
-    component: CollaboratorConfigComponent,
-  },
-  {
-    path: 'projetos',
-    component: ProjectsConfigComponent,
-  },
-  {
-    path: 'financeiro',
-    component: FinancesConfigComponent,
-  },
-  {
-    path: 'genericos',
-    component: GenericConfigComponent,
-  },
+
+
 ];
 
 
 @NgModule({
   declarations: [
-    RegistersInitialComponent,
-    ClientConfigComponent,
-    CollaboratorConfigComponent,
-    ProjectsConfigComponent,
-    FinancesConfigComponent,
-    GenericConfigComponent
+    RegisterComponent,
+    RegisterMenuComponent,
+    ConfigDialogComponent
+
   ],
   imports: [
     CommonModule,
@@ -69,6 +53,17 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatIconModule,
     MatTabsModule,
+    CommonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    TranslateModule.forChild(),
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatTableModule,
 
   ]
 })
