@@ -65,7 +65,7 @@ html {
   max-width: 1280px;
   margin: auto;
   height: calc(100% - 64px);
- 
+
 }
 
 // @media (min-width: 1201px) {
@@ -108,28 +108,28 @@ html {
   &-group {
     width: 100%;
     max-width: 1000px;
-    
-    
+
+
   }
 
   &-item {
     cursor: default;
     margin-bottom: 8px !important;
     color: #2F3133;
-    
+
   }
 
   &-border {
     border-bottom: 10px solid #b8bdbf;
     border-radius: 4px;
-    
+
   }
 
 
   .done {
     .tab-border {
       border-color: #ff6a39 !important;
-     
+
     }
   }
 
@@ -169,6 +169,124 @@ html {
   mat-icon {
     color: #753BBD;
   }
+}
+
+.table-styles {
+
+  table {
+    width: 100%;
+  }
+
+  .envolti-table {
+    margin-top: 20px;
+    overflow: auto;
+    max-height: 565px;
+    width: 100%;
+    border-radius: 10px;
+
+
+
+
+    .mat-column-icon {
+      width: 50px;
+    }
+
+    .button-tab {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .edit-button {
+      background-color: transparent !important;
+      color: white;
+    }
+  }
+}
+
+.table-button {
+  height: 100%;
+  margin-right: 0px !important;
+
+  mat-icon {
+    color: #753bbd;
+
+  }
+}
+
+.confirm-modal {
+  mat-dialog-container {
+    overflow: hidden !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 20px !important;
+    padding-bottom: 30px !important;
+    // .mat-dialog-content{
+
+    // }
+    border-radius: 10px;
+    height: 100% !important;
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
+    border: 2px solid #673ab7;
+
+    p {
+      letter-spacing: 0.25px;
+    }
+
+    button.delete {
+      color: #673ab7;
+    }
+
+    .button-confirm {
+      margin-left: 40px;
+    }
+  }
+}
+
+.checkbox {
+  margin-top: 18px;
+}
+
+.custom-frame {
+
+  & .mat-checkbox-background,
+  .mat-checkbox-frame {
+    border-radius: 70% !important;
+    // width: 20px;
+    // height: 20px;
+  }
+}
+
+.mat-option:hover {
+  background: #D0E7EF !important;
+}
+
+.mat-selected {
+  background: #D0E7EF !important;
+}
+
+.mat-row:hover {
+  background: #D0E7EF !important;
+}
+
+h2 {
+  color: #2F3133 !important;
+}
+
+
+.content-scroll {
+  overflow: auto;
+  height: calc(100vh - 280px);
+}
+
+.menu-button-logo {
+  margin-top: 8px !important;
+}
+
+mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 10px !important;
 }
 
 .confirm-modal {
@@ -249,7 +367,7 @@ html {
   background: #D0E7EF !important;
 }
 
-h2{
+h2 {
   color: #36383a;
 }
 
@@ -257,12 +375,12 @@ h2{
   margin-top: 8px !important;
 }
 
-th{
+th {
   font-size: 16px !important;
 }
 
 
-.btn-back{
+.btn-back {
   margin-top: 15px !important;
 }
 
@@ -277,9 +395,6 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.mat-flat-button{
+.mat-flat-button {
   background-color: transparent !important;
 }
-
-
-

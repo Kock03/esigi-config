@@ -64,12 +64,7 @@ export class ConfigDialogComponent implements OnInit {
     }
 
     async getData() {
-        let data = {
-            context: this.context,
-            key: this.key
-        }
-        console.log(data)
-        this.dataTable = await this.configProvider.findAll(data);
+        this.dataTable = await this.configProvider.findAll(this.context, this.key);
 
     }
 
@@ -81,7 +76,7 @@ export class ConfigDialogComponent implements OnInit {
 
         if (this.method === 'edit') {
             try {
-                await this.configProvider.update(this.id, this.context, data);
+                await this.configProvider.update(this.context, this.id, data);
                 this.method = '';
                 this.initForm();
                 this.getData();
@@ -118,7 +113,7 @@ export class ConfigDialogComponent implements OnInit {
     async delete(id: string) {
 
         try {
-            await this.configProvider.destroy(id, this.context);
+            await this.configProvider.destroy(this.context, id);
             this.initForm();
             this.getData();
             this.snackbarService.successMessage('Registro excluido com sucesso');

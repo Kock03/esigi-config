@@ -81,14 +81,52 @@ export const TAB_COLLABORATOR_MENU_LIST = [
     index: 2,
     menu: [
       {
+        modalTitle: 'Registro de Tipo de Dependentes',
+        menuName: 'Dependente',
+        context: 'collaborator',
+        key: 'depentents',
+        icon: 'supervisor_account',
+      },
+      {
         modalTitle: 'Registro de Senioridade',
         menuName: 'Senioridade',
         context: 'collaborator',
         key: 'seniority',
         icon: 'supervisor_account',
       },
-
-
+      {
+        modalTitle: 'Registro de Bancos',
+        menuName: 'Bancos',
+        context: 'collaborator',
+        key: 'banks',
+        icon: 'supervisor_account',
+      },
+    ]
+  },
+  {
+    index: 3,
+    menu: [
+      {
+        modalTitle: 'Registro de Tipo de Contas',
+        menuName: 'Tipo de Contas',
+        context: 'collaborator',
+        key: 'account_types',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Motivo de Pagamento',
+        menuName: 'Motivo de Pagamento',
+        context: 'collaborator',
+        key: 'payment_reason',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Motivo do Feedback',
+        menuName: 'Motivo do Feedback',
+        context: 'collaborator',
+        key: 'reason_for_feedback',
+        icon: 'supervisor_account',
+      },
     ]
   }
 

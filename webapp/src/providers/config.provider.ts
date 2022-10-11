@@ -22,37 +22,37 @@ export class ConfigProvider {
         });
     }
 
-    findAll(data: any): Promise<any> {
+    findAll(context: any, key: string): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.apiGateway.post(environment.CONFIG_MS + 'find/key', data)
+            this.apiGateway.get(environment.CONFIG_MS + context + '/find/' + key)
                 .subscribe((response: HttpResponse<any>) => {
                     resolve(response.body);
                 }, reject);
         });
     }
 
-    findOne(id: string, context: string): Promise<any> {
+    findOne(context: string, id: string): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.apiGateway.get(environment.CONFIG_MS + id + '/show/' + context)
+            this.apiGateway.get(environment.CONFIG_MS + context + '/show/' + id)
                 .subscribe((response: HttpResponse<any>) => {
                     resolve(response.body);
                 }, reject);
         });
     }
 
-    update(id: string, context: string, data: any): Promise<any> {
+    update(context: string, id: string, data: any): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.apiGateway.put(environment.CONFIG_MS + id + `/update/` + context, data)
+            this.apiGateway.put(environment.CONFIG_MS + context + `/update/` + id, data)
                 .subscribe((response: HttpResponse<any>) => {
                     resolve(response.body);
                 }, reject);
         });
     }
 
-    destroy(id: string, context: string | null): Promise<any> {
+    destroy(context: string | null, id: string,): Promise<any> {
         return new Promise((resolve, reject) => {
             this.apiGateway
-                .delete(environment.CONFIG_MS + id + '/delete/' + context)
+                .delete(environment.CONFIG_MS + context + '/delete/' + id)
                 .subscribe((response: HttpResponse<any>) => {
                     resolve(response.body);
                 }, reject);

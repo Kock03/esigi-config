@@ -21,7 +21,7 @@ export class ConfigDialogService {
       width: '80%',
       maxWidth: '1000px',
       height: '80%',
-      maxHeight: '700px',
+      maxHeight: '600px',
       panelClass: options.panelClass,
       backdropClass: options.backdropClass,
     });

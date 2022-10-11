@@ -1,88 +1,38 @@
-#modal {
-    .initial-group-box {
-        padding: 0px;
-        height: 100%;
-        width: 100%;
-        margin: auto;
-        overflow: auto;
-    }
-
+#menu {
     .tab-content {
         height: 100%;
         width: 100%;
-        max-height: 800px;
+        max-height: 100%;
         align-items: center;
-    }
-
-    mat-tab mat-icon {
-        height: 100%;
     }
 
     .img {
         width: 100%;
-        max-width: 550px;
+        max-width: 440px;
         height: 100%;
-        max-height: 550px;
-        cursor: pointer;
+        max-height: 440px;
     }
 
     .div {
-        padding-top: 100px;
-        margin-bottom: 400px;
+        padding-top: 45px;
+        margin-bottom: 30px;
         margin-left: 0%;
         margin-right: 0%;
     }
 
-    .initial-box {
-        margin: 6px;
-        width: 256px;
-        min-width: 256px;
-        height: 150px;
-        color: #F2F3F4;
-        border-color: transparent !important;
-        padding: 8px 12px 8px 12px;
-        background: #753BBD;
+    .go-back-button {
+        color: black !important;
     }
 
-    .initial-box:hover {
-        background: #A6D6E5 !important;
-        -webkit-transition: background-color 300ms linear;
-        -ms-transition: background-color 300ms linear;
-        transition: background-color 300ms linear;
+
+    .go-back-button:hover {
+        background: #208fd8 !important;
+        color: #fff !important;
     }
 
-    .initial-box:not(:hover)::before {
-        position: absolute;
-        top: 55px;
-        display: block;
-        height: 23px;
-        content: " ";
-        border-left: 3px solid #009CDE;
-        margin-left: -0.8rem;
-        transition: 0.3s;
-    }
 
-    .initial-box:hover::before {
-        position: absolute;
-        top: 0;
-        display: block;
-        height: 150px;
-        content: " ";
-        border-left: 3px solid #009CDE;
-        transition: 0.3s;
-        margin-left: -0.8rem;
-    }
 
-    .initial-name {
-        font-size: 15px;
-        text-align: center;
-        margin-top: 14px;
-        padding: 10px;
-        color: #F2F3F4;
-        display: block ruby !important;
-    }
 
-    .icon {
-        margin-left: -10px;
-    }
+
+
 }

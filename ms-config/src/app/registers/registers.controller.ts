@@ -19,7 +19,6 @@ export class RegistersController {
 
   @Post(':context')
   async store(@Param('context') context: string, @Body() body: CreateRegistersDto) {
-    console.log(context)
     switch (context) {
       case 'customer':
         return await this.customerRegistersService.store(body);
@@ -36,10 +35,10 @@ export class RegistersController {
     }
   }
 
-  @Put(':id/update/:context')
+  @Put(':context/update/:id')
   async update(
-    @Param('id', new ParseUUIDPipe()) id: string,
     @Param('context') context: string,
+    @Param('id', new ParseUUIDPipe()) id: string,
     @Body() body: UpdateRegistersDto
   ) {
     switch (context) {
@@ -57,29 +56,26 @@ export class RegistersController {
         break;
     }
   }
-
-  @Post('find/key')
-  async index(@Body() body: any) {
-    console.log(body)
-    switch (body.context) {
+  @Get(':context/find/:key')
+  async index(@Param('context') context: string, @Param('key') key: string,) {
+    switch (context) {
       case 'customer':
-        return await this.customerRegistersService.findAll(body.key);
+        return await this.customerRegistersService.findAll(key);
       case 'collaborator':
-        return await this.collaboratorRegistersService.findAll(body.key);
+        return await this.collaboratorRegistersService.findAll(key);
       case 'finance':
-        return await this.financeRegistersService.findAll(body.key);
+        return await this.financeRegistersService.findAll(key);
       case 'generic':
-        return await this.genericRegistersService.findAll(body.key);
+        return await this.genericRegistersService.findAll(key);
       case 'project':
-        return await this.projectRegistersService.findAll(body.key);
+        return await this.projectRegistersService.findAll(key);
       default:
         break;
     }
   }
 
-  @Get(':id/show/:context')
-  async show(@Param('id', new ParseUUIDPipe()) id: string,
-    @Param('context') context: string) {
+  @Get(':context/show/:id')
+  async show(@Param('context') context: string, @Param('id', new ParseUUIDPipe()) id: string) {
     switch (context) {
       case 'customer':
         return await this.customerRegistersService.findOneOrFail({ id });
@@ -96,10 +92,10 @@ export class RegistersController {
     }
   }
 
-  @Delete(':id/delete/:context')
+  @Delete(':context/delete/:id')
   @HttpCode(HttpStatus.NO_CONTENT)
-  async destroy(@Param('id', new ParseUUIDPipe()) id: string,
-    @Param('context') context: string) {
+  async destroy(@Param('context') context: string, @Param('id', new ParseUUIDPipe()) id: string,
+  ) {
     switch (context) {
       case 'customer':
         return await this.customerRegistersService.destroy(id);

@@ -3,10 +3,10 @@
     <div class="button-config-dialog-control">
         <mat-panel-title class="config-box" fxLayout="row">
             <mat-icon class="icon-config-dialog">account_circle</mat-icon>
-            <button disabled class="button-config" mat-button>
-                <h2 fxLayoutAlign="start">{{title}}</h2>
+            <button disabled class="button-config" fxLayoutAlign="start" mat-button>
+                <h2 fxLayoutAlign="center">{{title}}</h2>
             </button>
-            <button (click)="close()" class="cancel-icon-config" mat-button>
+            <button fxLayoutAlign="end" (click)="close()" class="cancel-icon-config" mat-icon-button>
                 <mat-icon>cancel</mat-icon>
             </button>
         </mat-panel-title>
@@ -15,17 +15,18 @@
         <mat-dialog-content fxLayout="column" fxLayoutAlign="space-between" class="mat-typography">
             <form class="form-config" [formGroup]="configForm" fxLayout="column">
                 <div fxFlex="100" fxLayoutGap="16px">
-                    <mat-form-field fxFlex="74" appearance="outline">
+                    <mat-form-field fxFlex="90" appearance="outline">
                         <mat-label>{{ "name" | translate }}</mat-label>
                         <input [errorStateMatcher]="matcher" matInput disableRipple formControlName="value"
                             placeholder="nome" />
                     </mat-form-field>
 
-                    <div fxFlex="26" fxLayout="row">
+                    <div fxFlex="16" fxLayout="row">
                         <button class="button-form-config" mat-button color="primary" (click)=" clear()">
                             <mat-icon>close</mat-icon>
                         </button>
-                        <button class="button-form-config" color="primary" mat-flat-button (click)="submit()">
+                        <button class="button-form-config" color="primary" mat-flat-button (click)="submit()"
+                            [disabled]="configForm.invalid">
                             <mat-icon>save</mat-icon>
                         </button>
                     </div>

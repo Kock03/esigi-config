@@ -24,6 +24,32 @@ export const TAB_GENERIC_MENU_LIST = [
         icon: 'supervisor_account',
       },
     ]
+  },
+  {
+    index: 1,
+    menu: [
+      {
+        modalTitle: 'Registro de Escolaridade',
+        menuName: 'Escolaridade',
+        context: 'generic',
+        key: 'schooling',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Grau de Fluência',
+        menuName: 'Grau de Fluência',
+        context: 'generic',
+        key: 'fluency_degree',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Nível de Idioma',
+        menuName: 'Nível de Idioma',
+        context: 'generic',
+        key: 'language_level',
+        icon: 'supervisor_account',
+      },
+    ]
   }
 
 ];
