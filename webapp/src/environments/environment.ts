@@ -7,6 +7,7 @@ export const environment = {
 
   CONFIG_MS: 'localhost:3508/api/v1/regiters/',
   portal: 'http://localhost:3406/login',
+  port: 'http://localhost:',
   message: 'LOCAL',
   protocol: 'http',
 };

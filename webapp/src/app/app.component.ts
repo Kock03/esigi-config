@@ -45,7 +45,7 @@ export class AppComponent {
       .subscribe((res: any) => {
         let valid = res.url.indexOf('validate');
         if (valid === -1) {
-        this.token = localStorage.getItem('token')!;
+          this.token = localStorage.getItem('token')!;
           if (!this.token) {
             location.replace(environment.portal);
           }
@@ -95,16 +95,16 @@ export class AppComponent {
         this.router.navigate(['email/novo']);
         break;
       case 'cadastros':
-        this.router.navigate(['cadastros/opcoes']); 
+        this.router.navigate(['cadastros/opcoes']);
         break;
-        case 'about':
-          this.router.navigate(['about/info']); 
-          break;
+      case 'about':
+        this.router.navigate(['about/info']);
+        break;
     }
   }
 
   openApp(): void {
-    location.replace(`http://localhost:3406/validate/${this.token}`);
+    location.replace(environment.port + `3406/validate/${this.token}`);
   }
 
   logout(): void {
