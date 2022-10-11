@@ -1,4 +1,4 @@
-export const TAB_COLLABORATOR_MENU_LIST = [
+export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
   {
     index: 0,
     menu: [
@@ -127,6 +127,51 @@ export const TAB_COLLABORATOR_MENU_LIST = [
         key: 'reason_for_feedback',
         icon: 'supervisor_account',
       },
+    ]
+  },
+  {
+    index: 4,
+    menu: [
+      {
+        modalTitle: 'Registro de Local de Trabalho',
+        menuName: 'Local de Trabalho',
+        context: 'collaborator',
+        key: 'workplace',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Tipo de Vaga',
+        menuName: 'Tipo de Vaga',
+        context: 'collaborator',
+        key: 'type_of_vacancy',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de Pontualidade',
+        menuName: 'Pontualidade',
+        context: 'collaborator',
+        key: 'punctuality',
+        icon: 'supervisor_account',
+      },
+    ]
+  },
+  {
+    index: 5,
+    menu: [
+      {
+        modalTitle: 'Registro de Apresentação',
+        menuName: 'Apresentação',
+        context: 'collaborator',
+        key: 'presentation',
+        icon: 'supervisor_account',
+      },
+      {
+        modalTitle: 'Registro de situation',
+        menuName: 'situation',
+        context: 'collaborator',
+        key: 'situation',
+        icon: 'supervisor_account',
+      }
     ]
   }
 

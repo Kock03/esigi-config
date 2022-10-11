@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigDialogService } from 'src/services/config-dialog.service';
 import { TAB_CUSTOMER_MENU_LIST } from '../utils/client-config-list';
-import { TAB_COLLABORATOR_MENU_LIST } from '../utils/collaborator-config-list';
+import { TAB_PEOPLE_MANAGEMENT_MENU_LIST } from '../utils/people-management-config';
 import { TAB_FINANCE_MENU_LIST } from '../utils/finances-config-list';
 import { TAB_GENERIC_MENU_LIST } from '../utils/gereric-config-list';
 import { TAB_PROJECT_MENU_LIST } from '../utils/project-config-list';
@@ -37,7 +37,7 @@ export class RegisterMenuComponent implements OnInit {
         this.menuTabList = TAB_CUSTOMER_MENU_LIST;
         break;
       case 'collaborator':
-        this.menuTabList = TAB_COLLABORATOR_MENU_LIST;
+        this.menuTabList = TAB_PEOPLE_MANAGEMENT_MENU_LIST;
         break;
       case 'project':
         this.menuTabList = TAB_PROJECT_MENU_LIST;
