@@ -22,6 +22,21 @@ export class ProjectRegistersService {
             .getMany();
     }
 
+    async findKeys(keyList: string[]) {
+        try {
+            return await this.projectRegistersRepository.find({
+                select: [
+                    'id',
+                    'value',
+                    'key'
+                ],
+                where: { key: In(keyList) },
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     async findOneOrFail(
         conditions: FindConditions<ProjectRegistersEntity>,
         options?: FindOneOptions<ProjectRegistersEntity>,
@@ -62,4 +77,8 @@ export class ProjectRegistersService {
         }
         return await this.projectRegistersRepository.softDelete({ id });
     }
+}
+
+function In(keyList: string[]) {
+    throw new Error("Function not implemented.");
 }

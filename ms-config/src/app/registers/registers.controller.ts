@@ -6,9 +6,10 @@ import { CreateRegistersDto } from "./dto/create-registers.dto";
 import { UpdateRegistersDto } from "./dto/update-registers.dto";
 import { FinanceRegistersService } from "./fincance-registers/finance-registers.service";
 import { GenericRegistersService } from "./generic-registers/generic-registers.service";
+import { IRegisters } from "./interface";
 import { ProjectRegistersService } from "./project-registers/project-registers.service";
 
-@Controller('/api/v1/regiters')
+@Controller('/api/v1/registers')
 export class RegistersController {
   constructor(private readonly projectRegistersService: ProjectRegistersService,
     private readonly genericRegistersService: GenericRegistersService,
@@ -111,4 +112,25 @@ export class RegistersController {
         break;
     }
   }
+
+  @Post('list/:context/key')
+  async findCollaboratorById(@Param('context') context: string, @Body() body: any) {
+    console.log(body, context);
+    switch (context) {
+      case 'customer':
+        return await this.customerRegistersService.findKeys(body.key);
+      case 'collaborator':
+        return await this.collaboratorRegistersService.findKeys(body.key);
+      case 'finance':
+        return await this.financeRegistersService.findKeys(body.key);
+      case 'generic':
+        return await this.genericRegistersService.findKeys(body.key);
+      case 'project':
+        return await this.projectRegistersService.findKeys(body.key);
+      default:
+        break;
+    }
+  }
+
+
 }

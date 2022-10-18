@@ -21,6 +21,21 @@ export class CustomerRegistersService {
             .getMany();
     }
 
+    async findKeys(keyList: string[]) {
+        try {
+            return await this.customerRegistersRepository.find({
+                select: [
+                    'id',
+                    'value',
+                    'key'
+                ],
+                where: { key: In(keyList) },
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     async findOneOrFail(
         conditions: FindConditions<CustomerRegistersEntity>,
         options?: FindOneOptions<CustomerRegistersEntity>,
@@ -61,4 +76,8 @@ export class CustomerRegistersService {
         }
         return await this.customerRegistersRepository.softDelete({ id });
     }
+}
+
+function In(keyList: string[]) {
+    throw new Error("Function not implemented.");
 }

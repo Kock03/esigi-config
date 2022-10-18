@@ -23,6 +23,21 @@ export class GenericRegistersService {
             .getMany();
     }
 
+    async findKeys(keyList: string[]) {
+        try {
+            return await this.genericRegistersRepository.find({
+                select: [
+                    'id',
+                    'value',
+                    'key'
+                ],
+                where: { key: In(keyList) },
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     async findOneOrFail(
         conditions: FindConditions<GenericRegistersEntity>,
         options?: FindOneOptions<GenericRegistersEntity>,
@@ -63,4 +78,8 @@ export class GenericRegistersService {
         }
         return await this.genericRegistersRepository.softDelete({ id });
     }
+}
+
+function In(keyList: string[]) {
+    throw new Error("Function not implemented.");
 }
