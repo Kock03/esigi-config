@@ -66,6 +66,7 @@ export class ConfigDialogComponent implements OnInit {
     async getData() {
         this.dataTable = await this.configProvider.findAll(this.context, this.key);
 
+
     }
 
 
@@ -89,7 +90,7 @@ export class ConfigDialogComponent implements OnInit {
                 this.initForm();
                 this.getData();
             } catch (error: any) {
-                console.log('ERROR 132' + error);
+                console.log(error);
             }
         }
         this.method = '';

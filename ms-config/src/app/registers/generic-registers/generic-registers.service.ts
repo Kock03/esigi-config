@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { FindConditions, FindManyOptions, FindOneOptions, Repository } from "typeorm";
+import { FindConditions, FindManyOptions, FindOneOptions, In, Repository } from "typeorm";
 import { CreateRegistersDto } from "../dto/create-registers.dto";
 import { UpdateRegistersDto } from "../dto/update-registers.dto";
 
@@ -21,6 +21,21 @@ export class GenericRegistersService {
         return await this.genericRegistersRepository.createQueryBuilder('generic_registers')
             .where('generic_registers.key = :key', { key: `${key}` })
             .getMany();
+    }
+
+    async findKeys(keyList: string[]) {
+        try {
+            return await this.genericRegistersRepository.find({
+                select: [
+                    'id',
+                    'value',
+                    'key'
+                ],
+                where: { key: In(keyList) },
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     async findOneOrFail(
@@ -64,3 +79,5 @@ export class GenericRegistersService {
         return await this.genericRegistersRepository.softDelete({ id });
     }
 }
+
+
