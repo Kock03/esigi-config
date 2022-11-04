@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  CONFIG_MS: 'localhost:3508/api/v1/regiters/',
+  CONFIG_MS: 'localhost:3508/api/v1/registers/',
   portal: 'http://localhost:3406/login',
   port: 'http://localhost:',
   message: 'LOCAL',

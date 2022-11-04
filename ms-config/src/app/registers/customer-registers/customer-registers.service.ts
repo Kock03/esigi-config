@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { FindConditions, FindManyOptions, FindOneOptions, Repository } from "typeorm";
+import { FindConditions, FindManyOptions, FindOneOptions, In, Repository } from "typeorm";
 import { CreateRegistersDto } from "../dto/create-registers.dto";
 import { UpdateRegistersDto } from "../dto/update-registers.dto";
 
@@ -78,6 +78,3 @@ export class CustomerRegistersService {
     }
 }
 
-function In(keyList: string[]) {
-    throw new Error("Function not implemented.");
-}
