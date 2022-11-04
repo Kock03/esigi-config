@@ -18,6 +18,7 @@ export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
+  home: string = 'portal'
   openTree: boolean = false;
   token!: string;
   active_directory: string = "active_directory";
@@ -88,6 +89,9 @@ export class AppComponent {
   navigator(route: any) {
     console.log("🚀 ~ file: app.component.ts ~ line 79 ~ AppComponent ~ navigator ~ route", route)
     switch (route) {
+      case 'portal':
+        location.replace(`http://192.168.8.184:3406/validate/${this.token}`);
+      break;
       case 'active_directory':
         this.router.navigate(['active_directory/novo']);
         break;
