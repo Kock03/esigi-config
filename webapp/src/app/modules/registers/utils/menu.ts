@@ -10,12 +10,12 @@ export const TAB_MENU_LIST = [
       {
         content: 'Cadastro de Collaborador',
         context: 'collaborator',
-        photo: 'src/../assets/icons/register.png'
+        photo: 'src/../assets/icons/register.png',
       },
       {
         content: 'Cadastro de Projetos',
         context: 'project',
-        photo: 'src/../assets/icons/register.png'
+        photo: 'src/../assets/icons/register.png',
       },
 
     ],
@@ -26,12 +26,12 @@ export const TAB_MENU_LIST = [
       {
         content: 'Cadastro de Fincanceiro',
         context: 'finance',
-        photo: 'src/../assets/icons/register.png'
+        photo: 'src/../assets/icons/register.png',
       },
       {
         content: 'Cadastro de Genéricos',
         context: 'generic',
-        photo: 'src/../assets/icons/register.png'
+        photo: 'src/../assets/icons/register.png',
       },
     ],
   },

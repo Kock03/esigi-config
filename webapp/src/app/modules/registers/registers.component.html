@@ -9,7 +9,7 @@
       </ng-template>
       <div fxLayout="row" fxLayoutAlign="center start">
         <div class="div" *ngFor="let menu of tab.menu">
-          <label>{{ menu.content }}</label>
+          <!-- <label>{{ menu.content }}</label> -->
           <img class="img" (click)="registerDetails(menu.context)">{{ menu.photo }}/>
         </div>
       </div>
