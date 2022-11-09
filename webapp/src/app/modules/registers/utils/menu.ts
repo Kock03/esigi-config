@@ -15,7 +15,7 @@ export const TAB_MENU_LIST = [
       {
         content: 'Cadastro de Projetos',
         context: 'project',
-        photo: 'src/../assets/icons/projects-config.png',
+        photo: 'src/../assets/icons/project-config.png',
       },
 
     ],
