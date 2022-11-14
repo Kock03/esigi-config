@@ -8,6 +8,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'reason_change_salary',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/reason-increase-config.png',
       },
       {
         modalTitle: 'Registro de Sexo',
@@ -15,6 +16,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'gender',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/sex-config.png',
       },
       {
         modalTitle: 'Registro de Estado Civil',
@@ -22,6 +24,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'marital_status',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/marital-status-config',
       },
     ]
   },
@@ -34,6 +37,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'relationship_type',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/type-relationshipmantp-config.png',
       },
       {
         modalTitle: 'Registro de Grau de Instrução',
@@ -41,6 +45,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'degree_of_instruction',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/education-level-config.png',
       },
       {
         modalTitle: 'Registro de Situação Instrução',
@@ -48,6 +53,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'status_instruction',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/education-situation-config.png',
       },
     ]
   },
@@ -60,6 +66,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'identification_document',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/document-type-config.png',
       },
       {
         modalTitle: 'Registro de Tipos de Contratos',
@@ -67,6 +74,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'types_of_contracts',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/contract-type-config.png',
       },
       {
         modalTitle: 'Registro de Tecnologias',
@@ -74,6 +82,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'technologies',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/tecnology-config.png',
       },
     ]
   },
@@ -86,6 +95,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'depentents',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/dependent-type-config.png',
       },
       {
         modalTitle: 'Registro de Senioridade',
@@ -93,6 +103,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'seniority',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/seniority-config.png',
       },
       {
         modalTitle: 'Registro de Bancos',
@@ -100,6 +111,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'banks',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/bank-config.png',
       },
     ]
   },
@@ -112,6 +124,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'account_types',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/account-type-config.png',
       },
       {
         modalTitle: 'Registro de Motivo de Pagamento',
@@ -119,6 +132,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'payment_reason',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/payment-reason-config.png',
       },
       {
         modalTitle: 'Registro de Motivo do Feedback',
@@ -126,6 +140,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'reason_for_feedback',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/feedbaack-reason-type.png',
       },
     ]
   },
@@ -138,6 +153,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'workplace',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/workplace-config.png',
       },
       {
         modalTitle: 'Registro de Tipo de Vaga',
@@ -145,6 +161,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'type_of_vacancy',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/type-vacancy-config.png',
       },
       {
         modalTitle: 'Registro de Pontualidade',
@@ -152,6 +169,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'punctuality',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/punctuality-config.png',
       },
     ]
   },
@@ -164,13 +182,15 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'presentation',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/presentation-config.png',
       },
       {
-        modalTitle: 'Registro de situation',
+        modalTitle: 'Registro de situação',
         menuName: 'situation',
         context: 'collaborator',
         key: 'situation',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/situation-config.png',
       }
     ]
   }
