@@ -8,12 +8,12 @@
         </ng-template>
         <mat-tab *ngFor="let tab of menuTabList">
             <ng-template mat-tab-label>
-                <mat-icon>fiber_manual_record</mat-icon>
+                <!-- <mat-icon>fiber_manual_record</mat-icon> -->
             </ng-template>
             <div fxLayout="row" fxLayoutAlign="center start">
                 <div class="div" *ngFor="let menu of tab.menu">
                     <!-- <label>{{menu.menuName}}</label> -->
-                    <img src="{{menu.photo}}" (click)="openModal(menu)" />
+                    <img src="{{menu.photo}}" class="img" (click)="openModal(menu)" />
                 </div>
             </div>
         </mat-tab>
