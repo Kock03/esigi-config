@@ -24,7 +24,7 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         context: 'collaborator',
         key: 'marital_status',
         icon: 'supervisor_account',
-        photo: 'src/../assets/icons/marital-status-config',
+        photo: 'src/../assets/icons/marital-status-config.png',
       },
     ]
   },
