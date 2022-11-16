@@ -8,6 +8,7 @@ export const TAB_FINANCE_MENU_LIST = [
         context: 'finance',
         key: 'financial_institution',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/financial-institution-config.png',
       },
       {
         modalTitle: 'Registro de Tipos de Despesas',
@@ -15,6 +16,7 @@ export const TAB_FINANCE_MENU_LIST = [
         context: 'finance',
         key: 'types_of_expenses',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/kind-of-person.png',
       },
       {
         modalTitle: 'Registro de Fornecedores',
@@ -22,6 +24,7 @@ export const TAB_FINANCE_MENU_LIST = [
         context: 'finance',
         key: 'providers',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/providers-config.png',
       },
     ]
   }
