@@ -90,7 +90,7 @@ export class AppComponent {
     console.log("🚀 ~ file: app.component.ts ~ line 79 ~ AppComponent ~ navigator ~ route", route)
     switch (route) {
       case 'portal':
-        location.replace(`http://44.198.33.18:3406/validate/${this.token}`);
+        location.replace(`http://44.205.159.254:3406/validate/${this.token}`);
       break;
       case 'active_directory':
         this.router.navigate(['active_directory/novo']);

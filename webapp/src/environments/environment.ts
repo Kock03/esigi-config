@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
 
-  CONFIG_MS: '44.198.33.18:3508/api/v1/registers/',
-  portal: 'http://44.198.33.18:3406/login',
-  port: 'http://44.198.33.18:',
+  CONFIG_MS: '44.205.159.254:3508/api/v1/registers/',
+  portal: 'http://44.205.159.254:3406/login',
+  port: 'http://44.205.159.254:',
   message: 'LOCAL',
   protocol: 'http',
 };
