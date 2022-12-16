@@ -8,6 +8,7 @@ export const TAB_PROJECT_MENU_LIST = [
                 context: 'project',
                 key: 'registration_papers',
                 icon: 'supervisor_account',
+                photo: 'src/../assets/icons/occupation-config.png',
             },
             {
                 modalTitle: 'Registro de Status de Projeto',
@@ -15,6 +16,7 @@ export const TAB_PROJECT_MENU_LIST = [
                 context: 'project',
                 key: 'project_status',
                 icon: 'supervisor_account',
+                photo: 'src/../assets/icons/project-status-config.png',
             }
         ]
     }

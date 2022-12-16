@@ -8,6 +8,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'generic',
         key: 'ddi',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/ddi-config.png',
       },
       {
         modalTitle: 'Registro de Idiomas',
@@ -15,6 +16,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'generic',
         key: 'languages',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/languages-config.png',
       },
       {
         modalTitle: 'Registro de Cargos Colaboradores',
@@ -22,6 +24,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'generic',
         key: 'collaborator_postition',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/collaborator-office-config.png',
       },
     ]
   },
@@ -35,6 +38,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'collaborator',
         key: 'types_of_contracts',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/schooling-config.png',
       },
       {
         modalTitle: 'Registro de Grau de Fluência',
@@ -42,6 +46,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'generic',
         key: 'fluency_degree',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/fluency-degree-config.png',
       },
       {
         modalTitle: 'Registro de Nível de Idioma',
@@ -49,6 +54,7 @@ export const TAB_GENERIC_MENU_LIST = [
         context: 'generic',
         key: 'language_level',
         icon: 'supervisor_account',
+        photo: 'src/../assets/icons/fluency-level-config.png',
       },
     ]
   }
