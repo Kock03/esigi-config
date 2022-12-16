@@ -3,14 +3,6 @@ export const TAB_GENERIC_MENU_LIST = [
     index: 0,
     menu: [
       {
-        modalTitle: 'Registro de DDI',
-        menuName: 'DDI',
-        context: 'generic',
-        key: 'ddi',
-        icon: 'supervisor_account',
-        photo: 'src/../assets/icons/ddi-config.png',
-      },
-      {
         modalTitle: 'Registro de Idiomas',
         menuName: 'Idiomas',
         context: 'generic',
@@ -26,12 +18,6 @@ export const TAB_GENERIC_MENU_LIST = [
         icon: 'supervisor_account',
         photo: 'src/../assets/icons/collaborator-office-config.png',
       },
-    ]
-  },
-  {
-    index: 1,
-    menu: [
-
       {
         modalTitle: 'Registro de Tipos de Contratos',
         menuName: 'Tipos de Contratos',
@@ -40,6 +26,11 @@ export const TAB_GENERIC_MENU_LIST = [
         icon: 'supervisor_account',
         photo: 'src/../assets/icons/schooling-config.png',
       },
+    ]
+  },
+  {
+    index: 1,
+    menu: [
       {
         modalTitle: 'Registro de Grau de Fluência',
         menuName: 'Grau de Fluência',
