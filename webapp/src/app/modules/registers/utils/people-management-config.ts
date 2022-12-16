@@ -62,10 +62,10 @@ export const TAB_PEOPLE_MANAGEMENT_MENU_LIST = [
         icon: 'supervisor_account',
       },
       {
-        modalTitle: 'Registro de Tipos de Contratos',
-        menuName: 'Tipos de Contratos',
-        context: 'collaborator',
-        key: 'types_of_contracts',
+        modalTitle: 'Registro de Escolaridade',
+        menuName: 'Escolaridade',
+        context: 'generic',
+        key: 'schooling',
         icon: 'supervisor_account',
       },
       {

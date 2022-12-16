@@ -28,11 +28,12 @@ export const TAB_GENERIC_MENU_LIST = [
   {
     index: 1,
     menu: [
+
       {
-        modalTitle: 'Registro de Escolaridade',
-        menuName: 'Escolaridade',
-        context: 'generic',
-        key: 'schooling',
+        modalTitle: 'Registro de Tipos de Contratos',
+        menuName: 'Tipos de Contratos',
+        context: 'collaborator',
+        key: 'types_of_contracts',
         icon: 'supervisor_account',
       },
       {
