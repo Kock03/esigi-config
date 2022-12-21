@@ -34,7 +34,7 @@ export class ActiveDirectoryCreateComponent implements OnInit {
   }
 
   goHome(port: number): void {
-    location.replace(`http://localhost:${port}/portal`);
+    location.replace(`https://aws-amplify.d3tee2p1a2jxch.amplifyapp.com/portal`);
   }
 
 }

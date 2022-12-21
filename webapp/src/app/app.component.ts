@@ -90,7 +90,7 @@ export class AppComponent {
     console.log("🚀 ~ file: app.component.ts ~ line 79 ~ AppComponent ~ navigator ~ route", route)
     switch (route) {
       case 'portal':
-        location.replace(`http://192.168.8.184:3406/validate/${this.token}`);
+        location.replace(`https://aws-amplify.d3tee2p1a2jxch.amplifyapp.com/validate/${this.token}`);
       break;
       case 'active_directory':
         this.router.navigate(['active_directory/novo']);
