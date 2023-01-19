@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  CONFIG_MS: 'https://esigi.envolti.com.br:3508/api/v1/registers/',
+  CONFIG_MS: 'https://esigi.envolti.com.br/config/api/v1/registers/',
   portal: 'https://aws-amplify.d3tee2p1a2jxch.amplifyapp.com/login',
   port: 'https://esigi.envolti.com.br:',
   message: 'LOCAL',

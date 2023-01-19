@@ -9,7 +9,7 @@ import { GenericRegistersService } from "./generic-registers/generic-registers.s
 import { IRegisters } from "./interface";
 import { ProjectRegistersService } from "./project-registers/project-registers.service";
 
-@Controller('/api/v1/registers')
+@Controller('/config/api/v1/registers')
 export class RegistersController {
   constructor(private readonly projectRegistersService: ProjectRegistersService,
     private readonly genericRegistersService: GenericRegistersService,
